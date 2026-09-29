@@ -1,0 +1,23 @@
+[
+  {
+    "id": "web-development",
+    "title": "Phát triển Web Tốc độ cao",
+    "description": "Xây dựng website chuẩn Next.js hiện đại, tối ưu điểm Core Web Vitals và thân thiện với công cụ tìm kiếm.",
+    "icon": "🚀",
+    "badge": "Phổ biến"
+  },
+  {
+    "id": "ui-ux-design",
+    "title": "Thiết kế UI/UX Trực quan",
+    "description": "Giao diện bắt mắt, chuyển động tinh tế theo sát thiết kế Figma và trải nghiệm người dùng mượt mà.",
+    "icon": "🎨",
+    "badge": "Sáng tạo"
+  },
+  {
+    "id": "seo-optimization",
+    "title": "Tối ưu hóa SEO & Hiệu năng",
+    "description": "Cấu trúc semantic HTML, metadata dynamic và kỹ thuật Static Site Generation giúp tăng thứ hạng tìm kiếm.",
+    "icon": "📈",
+    "badge": "Chiến lược"
+  }
+]
