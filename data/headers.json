@@ -1,0 +1,544 @@
+{
+  "ecommerce": {
+    "id": "ecommerce",
+    "title": "E-Commerce & Fashion Store",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Shop Now",
+      "href": "/shop"
+    },
+    "navItems": [
+      {
+        "name": "Home",
+        "href": "/",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce (Current)", "href": "/" },
+          { "name": "02. AI SaaS & Writer", "href": "/ai" },
+          { "name": "03. Digital Agency", "href": "/agency" },
+          { "name": "04. Dental Clinic", "href": "/dental" },
+          { "name": "05. NFT Marketplace", "href": "/nft" },
+          { "name": "06. Restaurant & Food", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit", "href": "/charity" },
+          { "name": "08. Online Education", "href": "/education" },
+          { "name": "09. Event & Conference", "href": "/event" },
+          { "name": "10. Sports & Fitness", "href": "/sports" }
+        ]
+      },
+      {
+        "name": "Product",
+        "href": "/products",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Men Fashion", "href": "/products#men" },
+          { "name": "Women Fashion", "href": "/products#women" },
+          { "name": "Accessories", "href": "/products#accessories" }
+        ]
+      },
+      {
+        "name": "New Arrival",
+        "href": "/new-arrivals",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Summer Collection", "href": "/new-arrivals#summer" },
+          { "name": "Trending Styles", "href": "/new-arrivals#trending" }
+        ]
+      },
+      { "name": "Blog", "href": "/blog" },
+      { "name": "Shop", "href": "/shop" },
+      {
+        "name": "Brand",
+        "href": "/brands",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Besnik Studio", "href": "/brands#besnik" },
+          { "name": "Official Stores", "href": "/brands#official" }
+        ]
+      }
+    ]
+  },
+  "ai": {
+    "id": "ai",
+    "title": "AI SaaS & Content Writer",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Get Started free",
+      "href": "/ai#pricing"
+    },
+    "navItems": [
+      {
+        "name": "Chat",
+        "href": "/ai",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce Store", "href": "/" },
+          { "name": "02. AI SaaS & Writer (Current)", "href": "/ai" },
+          { "name": "03. Digital Agency", "href": "/agency" },
+          { "name": "04. Dental Clinic", "href": "/dental" },
+          { "name": "05. NFT Marketplace", "href": "/nft" },
+          { "name": "06. Restaurant & Food", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit", "href": "/charity" },
+          { "name": "08. Online Education", "href": "/education" },
+          { "name": "09. Event & Conference", "href": "/event" },
+          { "name": "10. Sports & Fitness", "href": "/sports" }
+        ]
+      },
+      {
+        "name": "Use Cases",
+        "href": "/ai#use-cases",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Article & Blog Writer", "href": "/ai#articles" },
+          { "name": "Social Media Copy", "href": "/ai#social" },
+          { "name": "SEO Content Optimization", "href": "/ai#seo" }
+        ]
+      },
+      {
+        "name": "Resources",
+        "href": "/ai#resources",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Documentation", "href": "/ai#docs" },
+          { "name": "API Reference", "href": "/ai#api" },
+          { "name": "Community Discord", "href": "/ai#community" }
+        ]
+      },
+      { "name": "Pricing", "href": "/ai#pricing" },
+      {
+        "name": "Features",
+        "href": "/ai#features",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "AI Writer 2.0 Engine", "href": "/ai#engine" },
+          { "name": "Grammar Checker", "href": "/ai#grammar" },
+          { "name": "Plagiarism Detector", "href": "/ai#plagiarism" }
+        ]
+      }
+    ]
+  },
+  "agency": {
+    "id": "agency",
+    "title": "Digital Agency & Studio",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Start a Project",
+      "href": "/agency#contact"
+    },
+    "navItems": [
+      {
+        "name": "Home",
+        "href": "/agency",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce Store", "href": "/" },
+          { "name": "02. AI SaaS & Writer", "href": "/ai" },
+          { "name": "03. Digital Agency (Current)", "href": "/agency" },
+          { "name": "04. Dental Clinic", "href": "/dental" },
+          { "name": "05. NFT Marketplace", "href": "/nft" },
+          { "name": "06. Restaurant & Food", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit", "href": "/charity" },
+          { "name": "08. Online Education", "href": "/education" },
+          { "name": "09. Event & Conference", "href": "/event" },
+          { "name": "10. Sports & Fitness", "href": "/sports" }
+        ]
+      },
+      {
+        "name": "Services",
+        "href": "/agency#services",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Web & Mobile Development", "href": "/agency#web-dev" },
+          { "name": "UI/UX Product Design", "href": "/agency#ui-ux" },
+          { "name": "Digital Marketing Strategy", "href": "/agency#marketing" }
+        ]
+      },
+      {
+        "name": "Expertise",
+        "href": "/agency#expertise",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Next.js & React Architecture", "href": "/agency#tech" },
+          { "name": "Cloud Infrastructure", "href": "/agency#cloud" },
+          { "name": "Design Systems", "href": "/agency#design-systems" }
+        ]
+      },
+      { "name": "Cases", "href": "/agency#cases" },
+      { "name": "Pricing", "href": "/agency#pricing" },
+      {
+        "name": "Company",
+        "href": "/agency#company",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "About Studio", "href": "/agency#about" },
+          { "name": "Core Team", "href": "/agency#team" },
+          { "name": "Careers & Culture", "href": "/agency#careers" }
+        ]
+      }
+    ]
+  },
+  "dental": {
+    "id": "dental",
+    "title": "Dental Clinic & Healthcare",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Start a Project",
+      "href": "/dental#booking"
+    },
+    "navItems": [
+      {
+        "name": "Home",
+        "href": "/dental",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce Store", "href": "/" },
+          { "name": "02. AI SaaS & Writer", "href": "/ai" },
+          { "name": "03. Digital Agency", "href": "/agency" },
+          { "name": "04. Dental Clinic (Current)", "href": "/dental" },
+          { "name": "05. NFT Marketplace", "href": "/nft" },
+          { "name": "06. Restaurant & Food", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit", "href": "/charity" },
+          { "name": "08. Online Education", "href": "/education" },
+          { "name": "09. Event & Conference", "href": "/event" },
+          { "name": "10. Sports & Fitness", "href": "/sports" }
+        ]
+      },
+      { "name": "Services", "href": "/dental#services" },
+      { "name": "Appointment", "href": "/dental#appointment" },
+      { "name": "Facility", "href": "/dental#facility" },
+      { "name": "About", "href": "/dental#about" },
+      { "name": "Schedule", "href": "/dental#schedule" }
+    ]
+  },
+  "nft": {
+    "id": "nft",
+    "title": "NFT Marketplace",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Brows Shop",
+      "href": "/nft#shop"
+    },
+    "navItems": [
+      {
+        "name": "Discover",
+        "href": "/nft",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce Store", "href": "/" },
+          { "name": "02. AI SaaS & Writer", "href": "/ai" },
+          { "name": "03. Digital Agency", "href": "/agency" },
+          { "name": "04. Dental Clinic", "href": "/dental" },
+          { "name": "05. NFT Marketplace (Current)", "href": "/nft" },
+          { "name": "06. Restaurant & Food", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit", "href": "/charity" },
+          { "name": "08. Online Education", "href": "/education" },
+          { "name": "09. Event & Conference", "href": "/event" },
+          { "name": "10. Sports & Fitness", "href": "/sports" }
+        ]
+      },
+      {
+        "name": "Marketplace",
+        "href": "/nft#marketplace",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Trending Drops", "href": "/nft#drops" },
+          { "name": "Live Auctions", "href": "/nft#auctions" },
+          { "name": "Verified Artists", "href": "/nft#artists" }
+        ]
+      },
+      {
+        "name": "Resources",
+        "href": "/nft#resources",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Web3 Wallet Guide", "href": "/nft#guide" },
+          { "name": "Platform Tokens", "href": "/nft#tokens" },
+          { "name": "Support Discord", "href": "/nft#discord" }
+        ]
+      },
+      { "name": "Pricing", "href": "/nft#pricing" },
+      {
+        "name": "Features",
+        "href": "/nft#features",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Gasless Minting", "href": "/nft#mint" },
+          { "name": "Multi-Chain Bridge", "href": "/nft#bridge" },
+          { "name": "Creator Royalties", "href": "/nft#royalties" }
+        ]
+      }
+    ]
+  },
+  "restaurant": {
+    "id": "restaurant",
+    "title": "Restaurant & Food Delivery",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Order Now",
+      "href": "/restaurant#menu"
+    },
+    "navItems": [
+      {
+        "name": "Home",
+        "href": "/restaurant",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce Store", "href": "/" },
+          { "name": "02. AI SaaS & Writer", "href": "/ai" },
+          { "name": "03. Digital Agency", "href": "/agency" },
+          { "name": "04. Dental Clinic", "href": "/dental" },
+          { "name": "05. NFT Marketplace", "href": "/nft" },
+          { "name": "06. Restaurant & Food (Current)", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit", "href": "/charity" },
+          { "name": "08. Online Education", "href": "/education" },
+          { "name": "09. Event & Conference", "href": "/event" },
+          { "name": "10. Sports & Fitness", "href": "/sports" }
+        ]
+      },
+      {
+        "name": "Services",
+        "href": "/restaurant#services",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Dine In Experience", "href": "/restaurant#dine-in" },
+          { "name": "Express Delivery", "href": "/restaurant#delivery" },
+          { "name": "Event Catering", "href": "/restaurant#catering" }
+        ]
+      },
+      {
+        "name": "Expertise",
+        "href": "/restaurant#expertise",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Signature Recipes", "href": "/restaurant#recipes" },
+          { "name": "Organic Farm Produce", "href": "/restaurant#organic" },
+          { "name": "Master Sommelier", "href": "/restaurant#wine" }
+        ]
+      },
+      { "name": "Cases", "href": "/restaurant#cases" },
+      { "name": "Pricing", "href": "/restaurant#pricing" },
+      {
+        "name": "Company",
+        "href": "/restaurant#company",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Our Heritage", "href": "/restaurant#about" },
+          { "name": "Branch Locations", "href": "/restaurant#locations" },
+          { "name": "Reservations", "href": "/restaurant#reserve" }
+        ]
+      }
+    ]
+  },
+  "charity": {
+    "id": "charity",
+    "title": "Charity & Non-Profit",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Donate Now",
+      "href": "/charity#donate"
+    },
+    "navItems": [
+      {
+        "name": "Home",
+        "href": "/charity",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce Store", "href": "/" },
+          { "name": "02. AI SaaS & Writer", "href": "/ai" },
+          { "name": "03. Digital Agency", "href": "/agency" },
+          { "name": "04. Dental Clinic", "href": "/dental" },
+          { "name": "05. NFT Marketplace", "href": "/nft" },
+          { "name": "06. Restaurant & Food", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit (Current)", "href": "/charity" },
+          { "name": "08. Online Education", "href": "/education" },
+          { "name": "09. Event & Conference", "href": "/event" },
+          { "name": "10. Sports & Fitness", "href": "/sports" }
+        ]
+      },
+      {
+        "name": "Services",
+        "href": "/charity#services",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Child Education Fund", "href": "/charity#education" },
+          { "name": "Clean Water Initiative", "href": "/charity#water" },
+          { "name": "Emergency Medical Aid", "href": "/charity#medical" }
+        ]
+      },
+      {
+        "name": "Expertise",
+        "href": "/charity#expertise",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "100% Transparent Ledger", "href": "/charity#ledger" },
+          { "name": "Field Volunteers", "href": "/charity#volunteers" },
+          { "name": "UN Global Partners", "href": "/charity#partners" }
+        ]
+      },
+      { "name": "Cases", "href": "/charity#cases" },
+      { "name": "Pricing", "href": "/charity#pricing" },
+      {
+        "name": "Company",
+        "href": "/charity#company",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "About Foundation", "href": "/charity#about" },
+          { "name": "Annual Audit Report", "href": "/charity#reports" },
+          { "name": "Contact Representatives", "href": "/charity#contact" }
+        ]
+      }
+    ]
+  },
+  "education": {
+    "id": "education",
+    "title": "Online Education & Academy",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Sign Up",
+      "href": "/education#signup"
+    },
+    "navItems": [
+      {
+        "name": "Home",
+        "href": "/education",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce Store", "href": "/" },
+          { "name": "02. AI SaaS & Writer", "href": "/ai" },
+          { "name": "03. Digital Agency", "href": "/agency" },
+          { "name": "04. Dental Clinic", "href": "/dental" },
+          { "name": "05. NFT Marketplace", "href": "/nft" },
+          { "name": "06. Restaurant & Food", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit", "href": "/charity" },
+          { "name": "08. Online Education (Current)", "href": "/education" },
+          { "name": "09. Event & Conference", "href": "/event" },
+          { "name": "10. Sports & Fitness", "href": "/sports" }
+        ]
+      },
+      {
+        "name": "Course",
+        "href": "/education#course",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Web Frontend Masterclass", "href": "/education#frontend" },
+          { "name": "UI/UX & Product Design", "href": "/education#design" },
+          { "name": "Fullstack Cloud Architecture", "href": "/education#fullstack" }
+        ]
+      },
+      {
+        "name": "Mentor",
+        "href": "/education#mentor",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Senior Industry Experts", "href": "/education#experts" },
+          { "name": "1-on-1 Code Review", "href": "/education#coaching" },
+          { "name": "Career Mentorship", "href": "/education#career" }
+        ]
+      },
+      { "name": "Blog", "href": "/education#blog" },
+      { "name": "Contact", "href": "/education#contact" },
+      {
+        "name": "Program",
+        "href": "/education#program",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "12-Week Intensive Bootcamp", "href": "/education#bootcamp" },
+          { "name": "Professional Certification", "href": "/education#certs" },
+          { "name": "Corporate Training", "href": "/education#corporate" }
+        ]
+      }
+    ]
+  },
+  "event": {
+    "id": "event",
+    "title": "Event & Conference",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Register",
+      "href": "/event#register"
+    },
+    "navItems": [
+      {
+        "name": "Home",
+        "href": "/event",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce Store", "href": "/" },
+          { "name": "02. AI SaaS & Writer", "href": "/ai" },
+          { "name": "03. Digital Agency", "href": "/agency" },
+          { "name": "04. Dental Clinic", "href": "/dental" },
+          { "name": "05. NFT Marketplace", "href": "/nft" },
+          { "name": "06. Restaurant & Food", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit", "href": "/charity" },
+          { "name": "08. Online Education", "href": "/education" },
+          { "name": "09. Event & Conference (Current)", "href": "/event" },
+          { "name": "10. Sports & Fitness", "href": "/sports" }
+        ]
+      },
+      { "name": "Schedule", "href": "/event#schedule" },
+      { "name": "Speaker", "href": "/event#speaker" },
+      { "name": "Ticket", "href": "/event#ticket" },
+      { "name": "Contact", "href": "/event#contact" },
+      { "name": "Program", "href": "/event#program" }
+    ]
+  },
+  "sports": {
+    "id": "sports",
+    "title": "Sports & Basketball Academy",
+    "brand": "MicPro",
+    "cta": {
+      "text": "Start a Project",
+      "href": "/sports#join"
+    },
+    "navItems": [
+      {
+        "name": "Home",
+        "href": "/sports",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "01. E-Commerce Store", "href": "/" },
+          { "name": "02. AI SaaS & Writer", "href": "/ai" },
+          { "name": "03. Digital Agency", "href": "/agency" },
+          { "name": "04. Dental Clinic", "href": "/dental" },
+          { "name": "05. NFT Marketplace", "href": "/nft" },
+          { "name": "06. Restaurant & Food", "href": "/restaurant" },
+          { "name": "07. Charity & Non-Profit", "href": "/charity" },
+          { "name": "08. Online Education", "href": "/education" },
+          { "name": "09. Event & Conference", "href": "/event" },
+          { "name": "10. Sports & Fitness (Current)", "href": "/sports" }
+        ]
+      },
+      {
+        "name": "Services",
+        "href": "/sports#services",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Youth Training Camps", "href": "/sports#youth" },
+          { "name": "Elite Athlete Program", "href": "/sports#elite" },
+          { "name": "Private Coaching", "href": "/sports#coaching" }
+        ]
+      },
+      {
+        "name": "Expertise",
+        "href": "/sports#expertise",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "FIBA Certified Coaches", "href": "/sports#coaches" },
+          { "name": "High Performance Lab", "href": "/sports#lab" },
+          { "name": "Tactical Video Analysis", "href": "/sports#video" }
+        ]
+      },
+      { "name": "Cases", "href": "/sports#cases" },
+      { "name": "Pricing", "href": "/sports#pricing" },
+      {
+        "name": "Company",
+        "href": "/sports#company",
+        "hasDropdown": true,
+        "submenu": [
+          { "name": "Academy History", "href": "/sports#about" },
+          { "name": "Championship Records", "href": "/sports#records" },
+          { "name": "Facilities & Arenas", "href": "/sports#facilities" }
+        ]
+      }
+    ]
+  }
+}

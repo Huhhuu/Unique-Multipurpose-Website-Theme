@@ -1,49 +1,41 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Container from '@/components/common/Container'
-import Button from '@/components/common/Button'
 import Logo from '@/components/common/Logo'
+import headersData from '@/data/headers.json'
 
-const navItems = [
-  { name: 'Home', href: '/' },
-  {
-    name: 'Product',
-    href: '/products',
-    hasDropdown: true,
-    submenu: [
-      { name: 'Men Fashion', href: '/products#men' },
-      { name: 'Women Fashion', href: '/products#women' },
-      { name: 'Accessories', href: '/products#accessories' },
-    ],
-  },
-  {
-    name: 'New Arrival',
-    href: '/new-arrivals',
-    hasDropdown: true,
-    submenu: [
-      { name: 'Summer Collection', href: '/new-arrivals#summer' },
-      { name: 'Trending Styles', href: '/new-arrivals#trending' },
-    ],
-  },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Shop', href: '/shop' },
-  {
-    name: 'Brand',
-    href: '/brands',
-    hasDropdown: true,
-    submenu: [
-      { name: 'Besnik Studio', href: '/brands#besnik' },
-      { name: 'Official Stores', href: '/brands#official' },
-    ],
-  },
-]
-
-export default function Header() {
+export default function Header({ theme }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [mobileExpanded, setMobileExpanded] = useState({})
+  const [isScrolled, setIsScrolled] = useState(false)
   const router = useRouter()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const resolvedThemeKey = (() => {
+    if (theme && headersData[theme]) return theme
+    if (router.query && router.query.theme && headersData[router.query.theme]) {
+      return router.query.theme
+    }
+    const pathSegment = router.pathname.replace(/^\//, '').split('/')[0]
+    if (pathSegment && headersData[pathSegment]) {
+      return pathSegment
+    }
+    return 'ecommerce'
+  })()
+
+  const currentHeader = headersData[resolvedThemeKey] || headersData.ecommerce
+  const navItems = currentHeader.navItems || []
+  const cta = currentHeader.cta || { text: 'Shop Now', href: '/shop' }
 
   const toggleMobileMenu = () => setMobileMenuOpen(prev => !prev)
 
@@ -55,7 +47,13 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100/70'
+          : 'bg-transparent border-b border-transparent'
+      }`}
+    >
       <Container>
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
@@ -96,16 +94,23 @@ export default function Header() {
                     </button>
 
                     {activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 w-48 py-2 bg-white rounded-2xl shadow-xl border border-gray-100 animate-in fade-in slide-in-from-top-1 duration-150 z-50">
-                        {item.submenu.map((sub) => (
-                          <Link
-                            key={sub.name}
-                            href={sub.href}
-                            className="block px-4 py-2 text-b3 text-dark/70 hover:text-primary hover:bg-primary-light transition-colors"
-                          >
-                            {sub.name}
-                          </Link>
-                        ))}
+                      <div className="absolute top-full left-0 w-64 py-2 bg-white rounded-2xl shadow-xl border border-gray-100 animate-in fade-in slide-in-from-top-1 duration-150 z-50">
+                        {item.submenu.map((sub) => {
+                          const isSubActive = router.pathname === sub.href
+                          return (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              className={`block px-4 py-2.5 text-b3 transition-colors ${
+                                isSubActive
+                                  ? 'text-primary font-semibold bg-primary-light'
+                                  : 'text-dark/70 hover:text-primary hover:bg-primary-light/50'
+                              }`}
+                            >
+                              {sub.name}
+                            </Link>
+                          )
+                        })}
                       </div>
                     )}
                   </div>
@@ -128,10 +133,13 @@ export default function Header() {
             })}
           </nav>
 
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button href="/shop" size="md" className="rounded-full px-7">
-              Shop Now
-            </Button>
+          <div className="hidden lg:flex items-center">
+            <Link
+              href={cta.href}
+              className="inline-flex items-center justify-center h-11 px-7 rounded-full bg-primary text-white font-sans font-normal text-sub2 leading-[24px] tracking-normal hover:bg-primary-hover active:scale-[0.98] transition-all duration-200 shadow-none hover:shadow-md hover:shadow-primary/20"
+            >
+              {cta.text}
+            </Link>
           </div>
 
           <div className="flex lg:hidden">
@@ -153,7 +161,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-100 space-y-1">
+          <div className="lg:hidden py-4 px-4 bg-white/98 backdrop-blur-xl rounded-2xl shadow-xl border border-gray-100 my-2 space-y-1">
             {navItems.map((item) => {
               const isActive = router.pathname === item.href
 
@@ -212,9 +220,13 @@ export default function Header() {
             })}
 
             <div className="pt-4 px-2">
-              <Button href="/shop" className="w-full rounded-full">
-                Shop Now
-              </Button>
+              <Link
+                href={cta.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full inline-flex items-center justify-center h-11 px-6 rounded-full bg-primary text-white font-sans font-normal text-sub2 leading-[24px] tracking-normal hover:bg-primary-hover transition-colors"
+              >
+                {cta.text}
+              </Link>
             </div>
           </div>
         )}

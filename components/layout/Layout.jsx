@@ -4,6 +4,7 @@ import Footer from './Footer'
 
 export default function Layout({
   children,
+  theme,
   title = 'MicPro - Unique Multipurpose Modern Website',
   description = 'Website đa năng xây dựng bằng Next.js 13 Pages Router, Tailwind CSS và Framer Motion.',
 }) {
@@ -15,7 +16,7 @@ export default function Layout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Header />
+      <Header theme={theme} />
 
       <main className="flex-grow">
         {children}

@@ -4,7 +4,8 @@ import Button from '@/components/common/Button'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary-light/40 via-white to-white py-16 md:py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#EEF4FF] via-white to-white -mt-20 pt-28 md:pt-36 lg:pt-40 pb-16 md:pb-24 lg:pb-32">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-gradient-to-r from-primary-light/50 via-secondary-blue/10 to-secondary-pink/10 blur-3xl pointer-events-none -z-10" />
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <motion.div
