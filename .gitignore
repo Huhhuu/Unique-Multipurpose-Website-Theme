@@ -32,7 +32,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# documentation, reports & agents
+# documentation & agents
 /doc
-/baocao
 /.agents
+/baocao
