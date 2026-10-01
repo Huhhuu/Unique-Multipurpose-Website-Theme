@@ -4,64 +4,7 @@ import Container from '@/components/common/Container'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white -mt-20 pt-28 md:pt-36 lg:pt-40 pb-16 md:pb-24">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute left-1/2 -translate-x-1/2 w-[1440px] h-full pointer-events-none">
-          <div
-            className="absolute pointer-events-none"
-            style={{
-              width: '1362.54px',
-              height: '766.44px',
-              top: '281px',
-              left: '-753px',
-              borderRadius: '532.25px',
-              backgroundColor: 'rgba(81, 180, 250, 0.85)',
-              filter: 'blur(130px)',
-              transform: 'translateZ(0)',
-            }}
-          />
-          <div
-            className="absolute pointer-events-none"
-            style={{
-              width: '671px',
-              height: '377.44px',
-              top: '375px',
-              left: '882px',
-              borderRadius: '262.11px',
-              backgroundColor: 'rgba(248, 166, 240, 0.85)',
-              filter: 'blur(130px)',
-              transform: 'translateZ(0)',
-            }}
-          />
-          <div
-            className="absolute pointer-events-none"
-            style={{
-              width: '751.02px',
-              height: '422.45px',
-              top: '529px',
-              left: '29px',
-              borderRadius: '293.37px',
-              backgroundColor: 'rgba(133, 74, 235, 0.7)',
-              filter: 'blur(130px)',
-              transform: 'translateZ(0)',
-            }}
-          />
-          <div
-            className="absolute pointer-events-none"
-            style={{
-              width: '625.19px',
-              height: '351.66px',
-              top: '564px',
-              left: '592px',
-              borderRadius: '244.21px',
-              backgroundColor: 'rgba(248, 217, 151, 0.85)',
-              filter: 'blur(130px)',
-              transform: 'translateZ(0)',
-            }}
-          />
-        </div>
-      </div>
-
+    <section className="relative bg-transparent pt-28 md:pt-36 lg:pt-40 pb-8 sm:pb-12 md:pb-14">
       <Container className="relative z-10">
         <div className="relative max-w-4xl mx-auto text-center px-4">
           <motion.div

@@ -1,0 +1,180 @@
+{
+  "popularProducts": {
+    "title": "Popular Products",
+    "highlightWord": "Products",
+    "actionText": "See all Products",
+    "actionUrl": "/shop",
+    "products": [
+      {
+        "id": "prod-1",
+        "name": "Smart t- Sirt",
+        "category": "Men Fashion",
+        "price": 40,
+        "originalPrice": 100,
+        "currency": "$",
+        "image": "/images/ecommerce/popular_products/product-black-sweater.png",
+        "bgBoxColor": "#E8E9EB",
+        "isFavorite": true,
+        "rating": 4.9
+      },
+      {
+        "id": "prod-2",
+        "name": "Smart t- Sirt",
+        "category": "Men Fashion",
+        "price": 40,
+        "originalPrice": 100,
+        "currency": "$",
+        "image": "/images/ecommerce/popular_products/product-orange-tshirt.png",
+        "bgBoxColor": "#F6ECE4",
+        "isFavorite": false,
+        "rating": 4.8
+      },
+      {
+        "id": "prod-3",
+        "name": "Smart t- Sirt",
+        "category": "Men Fashion",
+        "price": 40,
+        "originalPrice": 100,
+        "currency": "$",
+        "image": "/images/ecommerce/popular_products/product-blue-tshirt.png",
+        "bgBoxColor": "#E6ECF1",
+        "isFavorite": false,
+        "rating": 4.9
+      },
+      {
+        "id": "prod-4",
+        "name": "Smart t- Sirt",
+        "category": "Women Fashion",
+        "price": 40,
+        "originalPrice": 100,
+        "currency": "$",
+        "image": "/images/ecommerce/popular_products/product-pink-tshirt.png",
+        "bgBoxColor": "#F9ECEF",
+        "isFavorite": false,
+        "rating": 4.7
+      }
+    ]
+  },
+  "similarItems": {
+    "category": "Men Fashion",
+    "title": "Similar Items You Might Enjoy",
+    "description": "Hello Designers! This is the video calling website landing page design concept. Video calling software is very popular nowadays.",
+    "image": "/images/ecommerce/similar/model-man-sunglasses.jpg",
+    "accordion": [
+      {
+        "id": "care",
+        "title": "Care instructions",
+        "content": "Machine wash at 30.c"
+      },
+      {
+        "id": "material",
+        "title": "Fabric material",
+        "content": "84% cotton, 16% polyester"
+      }
+    ]
+  },
+  "sellEverywhere": {
+    "title": "Sell everywhere",
+    "description": "Bring your products and services to the world. Get started with selling on one channel and expand everywhere online and in person.",
+    "features": [
+      {
+        "id": "sell-1",
+        "text": "Build a new online store or connect to any website",
+        "icon": "/images/ecommerce/icons/check-pink.svg"
+      },
+      {
+        "id": "sell-2",
+        "text": "Sell across social media platforms like Facebook, Instagram and TikTok",
+        "icon": "/images/ecommerce/icons/check-orange.svg"
+      },
+      {
+        "id": "sell-3",
+        "text": "Integrate with online marketplaces like Amazon, eBay, Walmart",
+        "icon": "/images/ecommerce/icons/check-blue.svg"
+      },
+      {
+        "id": "sell-4",
+        "text": "Connect with Point-of-Sale in your physical store",
+        "icon": "/images/ecommerce/icons/check-peach.svg"
+      }
+    ],
+    "cards": [
+      {
+        "id": "card-fb",
+        "channel": "facebook",
+        "icon": "/images/ecommerce/icons/facebook-logo.png",
+        "name": "Legend Brown",
+        "price": "$90.50",
+        "image": "/images/ecommerce/products/product-sunglasses.png"
+      },
+      {
+        "id": "card-ig",
+        "channel": "instagram",
+        "icon": "/images/ecommerce/icons/instagram-logo.png",
+        "name": "Black Watch",
+        "price": "$90.50",
+        "image": "/images/ecommerce/products/product-watch.png"
+      },
+      {
+        "id": "card-amz",
+        "channel": "amazon",
+        "icon": "/images/ecommerce/icons/amazon-logo.png",
+        "name": "Black Shoes",
+        "price": "$90.50",
+        "image": "/images/ecommerce/products/product-shoes.png"
+      }
+    ],
+    "models": {
+      "primary": "/images/ecommerce/sell_everywhere/model-white-tshirt.png",
+      "secondary": "/images/ecommerce/sell_everywhere/model-black-jacket.jpg"
+    }
+  },
+  "growFaster": {
+    "title": "Grow faster",
+    "description": "Take your business to the next level with our easy-to-use marketing tools to attract and retain more customers.",
+    "features": [
+      {
+        "id": "grow-1",
+        "text": "Automated Google and Facebook ads",
+        "icon": "/images/ecommerce/icons/check-pink.svg"
+      },
+      {
+        "id": "grow-2",
+        "text": "TikTok, Pinterest and Snapchat Pixel integrations",
+        "icon": "/images/ecommerce/icons/check-orange.svg"
+      },
+      {
+        "id": "grow-3",
+        "text": "Automated abandoned cart emails and other customizable Marketing emails",
+        "icon": "/images/ecommerce/icons/check-blue.svg"
+      },
+      {
+        "id": "grow-4",
+        "text": "Discount coupons and gift cards",
+        "icon": "/images/ecommerce/icons/check-peach.svg"
+      }
+    ],
+    "cards": {
+      "google": {
+        "channel": "Google",
+        "name": "Legend Brown Sunglasses",
+        "image": "/images/ecommerce/products/product-sunglasses.png",
+        "actionText": "Buy now"
+      },
+      "facebook": {
+        "channel": "Facebook",
+        "icon": "/images/ecommerce/icons/facebook-logo.png",
+        "name": "Black Watch",
+        "image": "/images/ecommerce/products/product-watch.png",
+        "actionText": "Buy now"
+      },
+      "amazon": {
+        "channel": "Amazon",
+        "icon": "/images/ecommerce/icons/amazon-logo.png",
+        "name": "Black Shoes",
+        "image": "/images/ecommerce/products/product-shoes.png",
+        "actionText": "Special Offer"
+      }
+    }
+  }
+}
