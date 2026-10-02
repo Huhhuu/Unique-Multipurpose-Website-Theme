@@ -5,7 +5,9 @@ import PopularProducts from '@/components/home/PopularProducts'
 import SimilarItems from '@/components/home/SimilarItems'
 import SellEverywhere from '@/components/home/SellEverywhere'
 import GrowFaster from '@/components/home/GrowFaster'
-import Testimonials from '@/components/home/Testimonials'
+import Stats from '@/components/home/Stats'
+import TestimonialCard from '@/components/home/TestimonialCard'
+import SupportServices from '@/components/home/SupportServices'
 import CTA from '@/components/home/CTA'
 
 export default function Home() {
@@ -22,9 +24,11 @@ export default function Home() {
         <SimilarItems />
         <SellEverywhere />
         <GrowFaster />
+        <Stats />
+        <TestimonialCard />
+        <SupportServices />
       </div>
 
-      <Testimonials />
       <CTA />
     </Layout>
   )

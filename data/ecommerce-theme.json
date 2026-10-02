@@ -176,5 +176,69 @@
         "actionText": "Special Offer"
       }
     }
-  }
+  },
+  "stats": [
+    {
+      "id": "stat-1",
+      "value": "36+",
+      "label": "User Trust",
+      "color": "#F961D8"
+    },
+    {
+      "id": "stat-2",
+      "value": "42k+",
+      "label": "Brand Vision",
+      "color": "#F5953A"
+    },
+    {
+      "id": "stat-3",
+      "value": "8k+",
+      "label": "Achievement",
+      "color": "#3DB0E5"
+    },
+    {
+      "id": "stat-4",
+      "value": "20k+",
+      "label": "Products",
+      "color": "#FF7999"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "testi-1",
+      "name": "Mitchell Marsh",
+      "role": "UI/UX Designer",
+      "avatar": "/images/ecommerce/testimonials/avatar-mitchell.png",
+      "quote": "Internal stakeholders were happy with the final product. The team was able to communicate their progress clearly and concisely. They took the initiative and executed the project without much supervision Internal stakeholders were happy with the final product."
+    }
+  ],
+  "supportServices": [
+    {
+      "id": "feat-1",
+      "title": "Onetime Support",
+      "description": "Find your place with an immersive photo experience and the most listings, including things",
+      "icon": "/images/ecommerce/features/icon-support.png",
+      "actionText": "Learn More",
+      "actionUrl": "#",
+      "isHighlighted": false
+    },
+    {
+      "id": "feat-2",
+      "title": "App Market",
+      "description": "No matter what path you take to sell your home, we can help you navigate a successful",
+      "icon": "/images/ecommerce/features/icon-app-market.png",
+      "actionText": "Learn More",
+      "actionUrl": "#",
+      "isHighlighted": true
+    },
+    {
+      "id": "feat-3",
+      "title": "Manage on Mobile",
+      "description": "We’re creating a seamless online experience – from shopping on the largest rental network",
+      "icon": "/images/ecommerce/features/icon-manage-mobile.png",
+      "actionText": "Learn More",
+      "actionUrl": "#",
+      "isHighlighted": false
+    }
+  ]
 }
