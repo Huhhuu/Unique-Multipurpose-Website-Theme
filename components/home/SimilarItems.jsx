@@ -34,7 +34,7 @@ export default function SimilarItems() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-heading font-bold text-3xl sm:text-4xl lg:text-[46px] leading-[1.18] text-[#1F2326] mb-5"
+              className="font-heading font-bold text-3xl sm:text-4xl lg:text-h2 leading-tight text-dark mb-5"
             >
               {similarItems.title}
             </motion.h2>
@@ -81,7 +81,7 @@ export default function SimilarItems() {
                       <button
                         type="button"
                         onClick={() => toggleAccordion(item.id)}
-                        className="text-left font-heading font-bold text-sm sm:text-base text-[#1F2326] hover:text-primary transition-colors focus:outline-none"
+                        className="text-left font-heading font-bold text-sm sm:text-base text-dark hover:text-primary transition-colors focus:outline-none"
                       >
                         {item.title}
                       </button>
@@ -114,7 +114,7 @@ export default function SimilarItems() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-full max-w-[440px] sm:max-w-[460px] aspect-[460/530] filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
+              className="relative w-full max-w-md sm:max-w-product-card aspect-shield filter drop-shadow-shield"
             >
               <svg
                 viewBox="0 0 460 530"

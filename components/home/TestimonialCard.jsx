@@ -8,34 +8,29 @@ export default function TestimonialCard() {
   const current = testimonials[0]
 
   return (
-    <section className="relative pt-16 sm:pt-20 pb-16 sm:pb-24 z-10">
+    <section className="relative pt-20 pb-16 sm:pb-24 z-10">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative max-w-[1170px] mx-auto pt-[60px] sm:pt-[71px]"
+          className="relative max-w-card mx-auto"
         >
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
-            <div className="w-[120px] h-[120px] sm:w-[142px] sm:h-[142px] rounded-full shadow-lg overflow-hidden flex items-center justify-center">
+          <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full shadow-lg overflow-hidden flex items-center justify-center">
               <Image
                 src={current.avatar}
                 alt={current.name}
-                width={142}
-                height={142}
+                width={144}
+                height={144}
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          <div
-            className="relative rounded-[20px] pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-12 lg:pb-16 px-5 sm:px-10 md:px-14 lg:px-16 text-center shadow-[0_20px_50px_rgba(22,99,249,0.22)] overflow-hidden min-h-[420px] sm:min-h-[460px] lg:min-h-[501px] flex flex-col items-center justify-center"
-            style={{
-              background: 'linear-gradient(90deg, #3F56EE 0%, #5094FA 100%)',
-            }}
-          >
-            <div className="absolute top-16 sm:top-24 lg:top-[150px] left-3 sm:left-10 lg:left-[90px] w-14 sm:w-20 lg:w-[128px] pointer-events-none select-none z-0">
+          <div className="relative rounded-card bg-gradient-testimonial pt-20 sm:pt-24 pb-12 sm:pb-16 px-6 sm:px-12 md:px-16 text-center shadow-testimonial overflow-hidden">
+            <div className="absolute top-16 sm:top-24 lg:top-36 left-4 sm:left-12 lg:left-24 w-16 sm:w-24 lg:w-32 pointer-events-none select-none z-0">
               <Image
                 src="/images/ecommerce/testimonials/quote-left.svg"
                 alt=""
@@ -45,7 +40,7 @@ export default function TestimonialCard() {
               />
             </div>
 
-            <div className="absolute bottom-6 sm:bottom-10 lg:bottom-[45px] right-3 sm:right-10 lg:right-[90px] w-14 sm:w-20 lg:w-[128px] pointer-events-none select-none z-0">
+            <div className="absolute bottom-6 sm:bottom-10 lg:bottom-12 right-4 sm:right-12 lg:right-24 w-16 sm:w-24 lg:w-32 pointer-events-none select-none z-0">
               <Image
                 src="/images/ecommerce/testimonials/quote-right.svg"
                 alt=""
@@ -55,26 +50,26 @@ export default function TestimonialCard() {
               />
             </div>
 
-            <div className="relative z-10 max-w-[913px] mx-auto w-full">
-              <h3 className="font-heading font-semibold text-white text-[18px] sm:text-[20px] leading-[26px] sm:leading-[28px]">
+            <div className="relative z-10 max-w-4xl mx-auto w-full">
+              <h3 className="font-heading font-semibold text-white text-lg sm:text-h5">
                 {current.name}
               </h3>
-              <p className="font-sans font-normal text-white text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24px] mt-1">
+              <p className="font-sans font-normal text-white text-sm sm:text-b2 mt-1">
                 {current.role}
               </p>
 
-              <blockquote className="font-heading font-bold text-white text-[17px] sm:text-[22px] md:text-[28px] lg:text-[34px] leading-snug sm:leading-normal md:leading-[38px] lg:leading-[42px] mt-6 sm:mt-7 lg:mt-8">
+              <blockquote className="font-heading font-bold text-white text-lg sm:text-2xl lg:text-h3 mt-6 sm:mt-8">
                 {current.quote}
               </blockquote>
             </div>
           </div>
 
           <div className="flex justify-center items-center gap-2.5 sm:gap-3 mt-8 sm:mt-10">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#D6E4FF]" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#D6E4FF]" />
-            <span className="w-3.5 h-3.5 rounded-full bg-[#1663F9]" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#D6E4FF]" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#D6E4FF]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-primary-dot" />
+            <span className="w-2.5 h-2.5 rounded-full bg-primary-dot" />
+            <span className="w-3.5 h-3.5 rounded-full bg-primary" />
+            <span className="w-2.5 h-2.5 rounded-full bg-primary-dot" />
+            <span className="w-2.5 h-2.5 rounded-full bg-primary-dot" />
           </div>
         </motion.div>
       </Container>

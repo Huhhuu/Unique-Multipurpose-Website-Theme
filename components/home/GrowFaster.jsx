@@ -16,7 +16,7 @@ export default function GrowFaster() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="font-heading font-bold text-3xl sm:text-4xl lg:text-[46px] leading-[1.18] text-[#1F2326] mb-5"
+              className="font-heading font-bold text-3xl sm:text-4xl lg:text-h2 leading-tight text-dark mb-5"
             >
               {growFaster.title}
             </motion.h2>
@@ -50,7 +50,7 @@ export default function GrowFaster() {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <span className="font-sans text-sm sm:text-base font-medium text-[#1F2326] leading-snug">
+                  <span className="font-sans text-sm sm:text-base font-medium text-dark leading-snug">
                     {feature.text}
                   </span>
                 </motion.li>
@@ -59,103 +59,108 @@ export default function GrowFaster() {
           </div>
 
           <div className="lg:col-span-6 flex justify-center">
-            <div className="relative w-full max-w-[500px] flex items-center justify-center gap-4 sm:gap-6">
+            <div className="relative w-grow-mockup-mobile lg:w-grow-mockup max-w-grow-mockup-mobile lg:max-w-grow-mockup flex items-start justify-center gap-grow-cols-gap-mobile lg:gap-grow-cols-gap mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 whileHover={{ y: -4 }}
-                className="w-1/2 bg-white rounded-2xl p-4 sm:p-5 shadow-[0_16px_36px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col justify-between"
+                className="w-grow-card-mobile lg:w-grow-card h-grow-google-mobile lg:h-grow-google mt-grow-google-top-mobile lg:mt-grow-google-top bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-5 shadow-card-elevated border border-gray-100 flex flex-col justify-between shrink-0"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="font-heading font-bold text-base sm:text-lg tracking-tight select-none">
-                      <span className="text-[#4285F4]">G</span>
-                      <span className="text-[#EA4335]">o</span>
-                      <span className="text-[#FBBC05]">o</span>
-                      <span className="text-[#4285F4]">g</span>
-                      <span className="text-[#34A853]">l</span>
-                      <span className="text-[#EA4335]">e</span>
-                    </div>
-                    <svg
-                      className="w-4 h-4 text-gray-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
+                <div className="flex items-center justify-between">
+                  <div className="font-heading font-medium text-xs sm:text-lg tracking-tight select-none">
+                    <span className="text-google-blue">G</span>
+                    <span className="text-google-red">o</span>
+                    <span className="text-google-yellow">o</span>
+                    <span className="text-google-blue">g</span>
+                    <span className="text-google-green">l</span>
+                    <span className="text-google-red">e</span>
                   </div>
-
-                  <div className="relative h-28 sm:h-36 flex items-center justify-center mb-6">
-                    <Image
-                      src={growFaster.cards.google.image}
-                      alt={growFaster.cards.google.name}
-                      width={180}
-                      height={100}
-                      className="max-h-full w-auto object-contain"
+                  <svg
+                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                     />
-                  </div>
+                  </svg>
+                </div>
+
+                <div className="relative my-auto flex items-center justify-center py-2 sm:py-4">
+                  <Image
+                    src={growFaster.cards.google.image}
+                    alt={growFaster.cards.google.name}
+                    width={160}
+                    height={90}
+                    className="w-auto h-14 sm:h-24 object-contain"
+                  />
                 </div>
 
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <div className="w-16 h-2 bg-gray-100 rounded-full" />
+                  <div className="flex items-center justify-between gap-1.5 sm:gap-2 mb-2 sm:mb-3.5">
+                    <div className="space-y-0.5 sm:space-y-1">
+                      <div className="w-10 sm:w-16 h-1 sm:h-1.5 bg-gray-100 rounded-full" />
+                      <div className="w-6 sm:w-10 h-1 sm:h-1.5 bg-gray-100 rounded-full" />
+                    </div>
                     <button
                       type="button"
-                      className="bg-primary hover:bg-blue-600 text-white text-[11px] sm:text-xs font-semibold px-3 py-1.5 rounded-md transition-colors"
+                      className="bg-primary hover:bg-primary-hover text-white text-2xs sm:text-xs font-medium px-2 py-1 sm:px-3 sm:py-1.5 rounded sm:rounded-md transition-colors"
                     >
                       {growFaster.cards.google.actionText}
                     </button>
                   </div>
 
-                  <div className="space-y-1.5 pt-1">
-                    <div className="w-full h-2 bg-gray-100 rounded-full" />
-                    <div className="w-3/4 h-2 bg-gray-100 rounded-full" />
+                  <div className="space-y-1 sm:space-y-1.5">
+                    <div className="w-full h-1 sm:h-1.5 bg-gray-100 rounded-full" />
+                    <div className="w-3/4 h-1 sm:h-1.5 bg-gray-100 rounded-full" />
+                    <div className="w-2/5 h-1 sm:h-1.5 bg-gray-100 rounded-full" />
                   </div>
                 </div>
               </motion.div>
 
-              <div className="w-1/2 flex flex-col gap-4 sm:gap-6">
+              <div className="w-grow-card-mobile lg:w-grow-card flex flex-col gap-grow-right-gap-mobile lg:gap-grow-right-gap shrink-0">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.15 }}
                   whileHover={{ y: -4 }}
-                  className="bg-white rounded-2xl p-4 shadow-[0_16px_36px_rgba(0,0,0,0.08)] border border-gray-100"
+                  className="w-grow-card-mobile lg:w-grow-card h-grow-subcard-mobile lg:h-grow-subcard bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-4 shadow-card-elevated border border-gray-100 flex flex-col justify-between shrink-0"
                 >
-                  <div className="w-5 h-5 relative mb-2">
+                  <div className="w-4 h-4 sm:w-6 sm:h-6 relative">
                     <Image
                       src={growFaster.cards.facebook.icon}
                       alt="Facebook"
-                      width={20}
-                      height={20}
+                      width={24}
+                      height={24}
                       className="w-full h-full object-contain"
                     />
                   </div>
 
-                  <div className="relative h-20 sm:h-24 flex items-center justify-center mb-3">
+                  <div className="relative my-auto flex items-center justify-center py-1 sm:py-2">
                     <Image
                       src={growFaster.cards.facebook.image}
                       alt={growFaster.cards.facebook.name}
-                      width={100}
-                      height={100}
-                      className="max-h-full w-auto object-contain"
+                      width={90}
+                      height={90}
+                      className="w-auto h-14 sm:h-24 object-contain"
                     />
                   </div>
 
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="w-14 h-2 bg-gray-100 rounded-full" />
+                  <div className="flex items-center justify-between gap-1.5 sm:gap-2">
+                    <div className="space-y-0.5 sm:space-y-1">
+                      <div className="w-10 sm:w-14 h-1 sm:h-1.5 bg-gray-100 rounded-full" />
+                      <div className="w-6 sm:w-8 h-1 sm:h-1.5 bg-gray-100 rounded-full" />
+                    </div>
                     <button
                       type="button"
-                      className="bg-primary hover:bg-blue-600 text-white text-[11px] sm:text-xs font-semibold px-3 py-1.5 rounded-md transition-colors"
+                      className="bg-primary hover:bg-primary-hover text-white text-2xs sm:text-xs font-medium px-2 py-1 sm:px-3 sm:py-1.5 rounded sm:rounded-md transition-colors"
                     >
                       {growFaster.cards.facebook.actionText}
                     </button>
@@ -168,39 +173,42 @@ export default function GrowFaster() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                   whileHover={{ y: -4 }}
-                  className="bg-white rounded-2xl p-4 shadow-[0_16px_36px_rgba(0,0,0,0.08)] border border-gray-100"
+                  className="w-grow-card-mobile lg:w-grow-card h-grow-subcard-mobile lg:h-grow-subcard bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-4 shadow-card-elevated border border-gray-100 flex flex-col justify-between shrink-0"
                 >
-                  <div className="w-5 h-5 relative mb-2">
+                  <div className="w-4 h-4 sm:w-6 sm:h-6 relative">
                     <Image
                       src={growFaster.cards.amazon.icon}
                       alt="Amazon"
-                      width={20}
-                      height={20}
+                      width={24}
+                      height={24}
                       className="w-full h-full object-contain"
                     />
                   </div>
 
-                  <div className="relative h-16 sm:h-20 flex items-center justify-center mb-3">
+                  <div className="relative my-auto flex items-center justify-center py-1">
                     <Image
                       src={growFaster.cards.amazon.image}
                       alt={growFaster.cards.amazon.name}
-                      width={140}
-                      height={90}
-                      className="max-h-full w-auto object-contain"
+                      width={120}
+                      height={75}
+                      className="w-auto h-11 sm:h-18 object-contain"
                     />
                   </div>
 
-                  <div className="space-y-1.5 mb-3">
-                    <div className="w-full h-2 bg-gray-100 rounded-full" />
-                    <div className="w-2/3 h-2 bg-gray-100 rounded-full" />
-                  </div>
+                  <div>
+                    <div className="space-y-1 sm:space-y-1.5 mb-2 sm:mb-3">
+                      <div className="w-full h-1 sm:h-1.5 bg-gray-100 rounded-full" />
+                      <div className="w-3/4 h-1 sm:h-1.5 bg-gray-100 rounded-full" />
+                      <div className="w-2/5 h-1 sm:h-1.5 bg-gray-100 rounded-full" />
+                    </div>
 
-                  <button
-                    type="button"
-                    className="w-full bg-primary hover:bg-blue-600 text-white text-xs font-semibold py-2 rounded-lg transition-colors text-center"
-                  >
-                    {growFaster.cards.amazon.actionText}
-                  </button>
+                    <button
+                      type="button"
+                      className="w-full bg-primary hover:bg-primary-hover text-white text-2xs sm:text-xs font-medium py-1 sm:py-2 rounded sm:rounded-md transition-colors text-center"
+                    >
+                      {growFaster.cards.amazon.actionText}
+                    </button>
+                  </div>
                 </motion.div>
               </div>
             </div>

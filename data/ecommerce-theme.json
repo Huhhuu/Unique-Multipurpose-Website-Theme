@@ -240,5 +240,95 @@
       "actionUrl": "#",
       "isHighlighted": false
     }
-  ]
+  ],
+  "cta": {
+    "title": "Your Own Online Store is Just a Few Clicks Away",
+    "actionText": "Get Started for free",
+    "actionUrl": "/shop",
+    "note": "No credit card required — pay when you're ready."
+  },
+  "footer": {
+    "description": "The new allocation will help expand response to cover those.",
+    "columns": [
+      {
+        "title": "Sell Online",
+        "links": [
+          { "label": "Sell Everywhere", "href": "#" },
+          { "label": "Sell on website", "href": "#" },
+          { "label": "Sell on instagram", "href": "#" },
+          { "label": "Sell on amazon", "href": "#" },
+          { "label": "Sell on mobile", "href": "#" }
+        ]
+      },
+      {
+        "title": "Business Solutions",
+        "links": [
+          { "label": "Entrepreneurs", "href": "#" },
+          { "label": "Drop shipping", "href": "#" },
+          { "label": "Wholesale", "href": "#" },
+          { "label": "Local Business", "href": "#" },
+          { "label": "Fashion", "href": "#" }
+        ]
+      },
+      {
+        "title": "Technology",
+        "links": [
+          { "label": "CMS", "href": "#" },
+          { "label": "WordPress", "href": "#" },
+          { "label": "Drupal", "href": "#" },
+          { "label": "Joomla", "href": "#" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          { "label": "help Center", "href": "#" },
+          { "label": "Podcast", "href": "#" },
+          { "label": "Blog", "href": "#" },
+          { "label": "Guides", "href": "#" },
+          { "label": "Glossary", "href": "#" },
+          { "label": "Product Sell", "href": "#" }
+        ]
+      }
+    ],
+    "newsletter": {
+      "placeholder": "Email Address",
+      "buttonText": "Subscrive"
+    },
+    "socialLinks": [
+      {
+        "name": "Facebook",
+        "href": "https://facebook.com",
+        "icon": "/images/ecommerce/footer/icon-facebook.svg"
+      },
+      {
+        "name": "Google Plus",
+        "href": "https://plus.google.com",
+        "icon": "/images/ecommerce/footer/icon-google-plus.png"
+      },
+      {
+        "name": "Twitter",
+        "href": "https://twitter.com",
+        "icon": "/images/ecommerce/footer/icon-twitter.png"
+      },
+      {
+        "name": "Dribbble",
+        "href": "https://dribbble.com",
+        "icon": "/images/ecommerce/footer/icon-dribbble.png"
+      }
+    ],
+    "appStoreLinks": [
+      {
+        "name": "Google Play",
+        "href": "https://play.google.com",
+        "image": "/images/ecommerce/footer/badge-google-play.png"
+      },
+      {
+        "name": "App Store",
+        "href": "https://apple.com/app-store",
+        "image": "/images/ecommerce/footer/badge-app-store.png"
+      }
+    ],
+    "copyright": "© 2021 Besnik.com l All Rights Reserved"
+  }
 }

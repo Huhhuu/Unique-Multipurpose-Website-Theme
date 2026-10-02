@@ -58,10 +58,10 @@ export default function PopularProducts() {
   return (
     <section className="relative bg-transparent pt-0 pb-20 sm:pb-28 overflow-visible">
       <Container className="overflow-visible">
-        <div className="bg-white rounded-[28px] sm:rounded-[36px] md:rounded-[44px] lg:rounded-[48px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.06)] border border-gray-100/80 p-5 sm:p-8 md:p-10 lg:p-12 xl:p-14 overflow-visible">
+        <div className="bg-white rounded-3xl lg:rounded-4xl shadow-card-soft border border-gray-100/80 p-5 sm:p-8 md:p-10 lg:p-12 xl:p-14 overflow-visible">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 sm:mb-8 md:mb-10 lg:mb-12">
             <div className="w-full md:w-auto text-center md:text-left">
-              <h2 className="font-heading font-extrabold text-[28px] sm:text-[34px] md:text-[40px] lg:text-[46px] text-dark tracking-tight leading-tight">
+              <h2 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-h2 text-dark tracking-tight leading-tight">
                 {popularProducts.title.replace(popularProducts.highlightWord, '')}
                 <span className="text-primary">{popularProducts.highlightWord}</span>
               </h2>
@@ -69,7 +69,7 @@ export default function PopularProducts() {
 
             <Link
               href={popularProducts.actionUrl}
-              className="hidden md:inline-flex items-center gap-2.5 bg-primary hover:bg-blue-700 text-white font-medium text-sm sm:text-base px-6 sm:px-7 py-3 sm:py-3.5 rounded-[14px] transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 group"
+              className="hidden md:inline-flex items-center gap-2.5 bg-primary hover:bg-blue-700 text-white font-medium text-sm sm:text-base px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 group"
             >
               <span>{popularProducts.actionText}</span>
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
@@ -91,9 +91,9 @@ export default function PopularProducts() {
                   key={product.id}
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
-                  className={`w-[260px] sm:w-[280px] md:w-auto flex-shrink-0 md:flex-shrink snap-center md:snap-align-none flex flex-col p-2.5 sm:p-3 rounded-[14px] sm:rounded-[16px] border transition-all duration-300 ${
+                  className={`w-64 sm:w-72 md:w-auto flex-shrink-0 md:flex-shrink snap-center md:snap-align-none flex flex-col p-2.5 sm:p-3 rounded-2xl border transition-all duration-300 ${
                     isHighlighted
-                      ? 'bg-white shadow-[0_20px_45px_-10px_rgba(0,0,0,0.12)] border-gray-100/90 -mb-6 md:-mb-10 relative z-20'
+                      ? 'bg-white shadow-card-hover border-gray-100/90 -mb-6 md:-mb-10 relative z-20'
                       : 'bg-transparent border-transparent mb-0 relative z-10'
                   }`}
                   initial={{ opacity: 0, y: 20 }}
@@ -102,7 +102,7 @@ export default function PopularProducts() {
                   transition={{ duration: 0.45, delay: idx * 0.08, ease: 'easeOut' }}
                 >
                   <div
-                    className="relative aspect-square rounded-[10px] sm:rounded-[12px] p-5 sm:p-6 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:scale-105"
+                    className="relative aspect-square rounded-xl p-5 sm:p-6 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:scale-105"
                     style={{ backgroundColor: product.bgBoxColor }}
                   >
                     <button
@@ -114,8 +114,8 @@ export default function PopularProducts() {
                       <svg
                         className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-200 ${
                           isFav
-                            ? 'fill-[#FF7999] text-[#FF7999]'
-                            : 'fill-transparent text-[#9CA3AF] hover:text-[#FF7999]'
+                            ? 'fill-secondary-rose text-secondary-rose'
+                            : 'fill-transparent text-gray-400 hover:text-secondary-rose'
                         }`}
                         viewBox="0 0 24 24"
                         strokeWidth={1.8}
@@ -143,20 +143,20 @@ export default function PopularProducts() {
                   <div className="mt-3.5 sm:mt-4 px-1.5 pb-1 flex items-center justify-between">
                     <div>
                       <h3
-                        className={`font-heading text-[16px] sm:text-[17px] tracking-tight transition-colors ${
-                          isHighlighted ? 'font-semibold text-dark' : 'font-medium text-[#6B7280]'
+                        className={`font-heading text-b2 sm:text-sub1 tracking-tight transition-colors ${
+                          isHighlighted ? 'font-semibold text-dark' : 'font-medium text-gray-500'
                         }`}
                       >
                         {product.name}
                       </h3>
                       <div className="flex items-baseline mt-1">
-                        <span className="font-heading font-extrabold text-[18px] sm:text-[20px] text-dark leading-none">
+                        <span className="font-heading font-extrabold text-lg sm:text-h5 text-dark leading-none">
                           {product.price}
                           <span className="text-xs sm:text-sm font-bold text-primary ml-0.5">
                             {product.currency}
                           </span>
                         </span>
-                        <span className="text-xs text-[#9CA3AF] line-through ml-2 font-medium">
+                        <span className="text-xs text-gray-400 line-through ml-2 font-medium">
                           {product.originalPrice}
                           {product.currency}
                         </span>
@@ -166,7 +166,7 @@ export default function PopularProducts() {
                     <button
                       type="button"
                       onClick={() => handleBuy(product.id)}
-                      className={`font-heading font-bold text-xs uppercase tracking-wider px-4 sm:px-5 py-2.5 rounded-[10px] transition-all duration-200 shadow-sm active:scale-95 ${
+                      className={`font-heading font-bold text-xs uppercase tracking-wider px-4 sm:px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm active:scale-95 ${
                         isAdded
                           ? 'bg-emerald-500 text-white'
                           : 'bg-primary hover:bg-blue-700 text-white hover:shadow-md'

@@ -6,7 +6,7 @@ export default function Stats() {
   const { stats } = themeData
 
   return (
-    <section className="relative py-14 sm:py-16 md:py-20 bg-[#F4F8FC] z-10">
+    <section className="relative py-14 sm:py-16 md:py-20 bg-surface-stats z-10">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-0 items-center max-w-md md:max-w-none mx-auto">
           {stats.map((stat, idx) => (
@@ -21,7 +21,7 @@ export default function Stats() {
               } px-4`}
             >
               <span
-                className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-[54px] leading-tight"
+                className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-h2 leading-tight"
                 style={{ color: stat.color }}
               >
                 {stat.value}
@@ -31,7 +31,7 @@ export default function Stats() {
               </span>
 
               {idx < stats.length - 1 && (
-                <div className="w-20 h-[1px] bg-[#E2E8F0] mt-6 md:hidden" />
+                <div className="w-20 h-px bg-slate-200 mt-6 md:hidden" />
               )}
             </motion.div>
           ))}

@@ -11,7 +11,7 @@ const themeDetails = {
     ctaText: 'Start Writing for free',
     ctaHref: '/ai#pricing',
     sections: ['AI Writer 2.0 Engine', 'Social Media Copywriting', 'SEO Article Generator', '10,000+ Marketers Trust'],
-    accentColor: 'from-[#1663F9] to-[#3DB0E5]',
+    accentColor: 'from-primary to-secondary-blue',
   },
   agency: {
     number: '02',
@@ -20,7 +20,7 @@ const themeDetails = {
     ctaText: 'Contact Us Today',
     ctaHref: '/agency#contact',
     sections: ['Custom Web Development', 'UI/UX Design Studio', 'Digital Marketing Strategy', 'Case Studies Portfolio'],
-    accentColor: 'from-[#1663F9] to-[#F961D8]',
+    accentColor: 'from-primary to-secondary-pink',
   },
   dental: {
     number: '03',
@@ -29,7 +29,7 @@ const themeDetails = {
     ctaText: 'Book Appointment',
     ctaHref: '/dental#booking',
     sections: ['Teeth Whitening', 'Dental Implants', 'Cosmetic Dentistry', '24/7 Emergency Care'],
-    accentColor: 'from-[#3DB0E5] to-[#1663F9]',
+    accentColor: 'from-secondary-blue to-primary',
   },
   nft: {
     number: '04',
@@ -38,7 +38,7 @@ const themeDetails = {
     ctaText: 'Connect Wallet',
     ctaHref: '/nft#wallet',
     sections: ['Top Trending Drops', 'Live Auctions', 'Verified Artists', 'Decentralized Marketplace'],
-    accentColor: 'from-[#F961D8] to-[#1663F9]',
+    accentColor: 'from-secondary-pink to-primary',
   },
   restaurant: {
     number: '05',
@@ -47,7 +47,7 @@ const themeDetails = {
     ctaText: 'Order Online',
     ctaHref: '/restaurant#menu',
     sections: ['Signature Dishes', 'Special Offers & Combos', 'Table Reservation', 'Fast 30-min Delivery'],
-    accentColor: 'from-[#F5953A] to-[#FC5230]',
+    accentColor: 'from-secondary-orange to-danger',
   },
   charity: {
     number: '06',
@@ -56,7 +56,7 @@ const themeDetails = {
     ctaText: 'Donate Now',
     ctaHref: '/charity#donate',
     sections: ['Active Campaigns', 'Transparent Tracking', 'Global Donors Wall', 'Volunteer Programs'],
-    accentColor: 'from-[#FF7999] to-[#F961D8]',
+    accentColor: 'from-secondary-rose to-secondary-pink',
   },
   education: {
     number: '07',
@@ -65,7 +65,7 @@ const themeDetails = {
     ctaText: 'Get Started',
     ctaHref: '/education#courses',
     sections: ['Top Rated Courses', 'Expert Instructors', 'Interactive Quizzes', 'Accredited Certificates'],
-    accentColor: 'from-[#1663F9] to-[#3DB0E5]',
+    accentColor: 'from-primary to-secondary-blue',
   },
   event: {
     number: '08',
@@ -74,7 +74,7 @@ const themeDetails = {
     ctaText: 'Buy Ticket',
     ctaHref: '/event#tickets',
     sections: ['Keynote Speakers', 'Event Schedule', 'Workshops & Networking', 'VIP Passes'],
-    accentColor: 'from-[#F5953A] to-[#1663F9]',
+    accentColor: 'from-secondary-orange to-primary',
   },
   sports: {
     number: '09',
@@ -83,7 +83,7 @@ const themeDetails = {
     ctaText: 'Join Club',
     ctaHref: '/sports#join',
     sections: ['Youth Training Camps', 'Professional Coaches', 'Court Facilities', 'Championship Tournaments'],
-    accentColor: 'from-[#FC5230] to-[#F5953A]',
+    accentColor: 'from-danger to-secondary-orange',
   },
 }
 
@@ -96,13 +96,13 @@ export default function ThemePreview({ themeKey }) {
     ctaText: currentTheme.cta?.text || 'Learn More',
     ctaHref: currentTheme.cta?.href || '/',
     sections: ['Responsive Layout', 'Tailwind Styling', 'Dynamic Navigation', 'Framer Motion'],
-    accentColor: 'from-[#1663F9] to-[#3DB0E5]',
+    accentColor: 'from-primary to-secondary-blue',
   }
 
   const allThemesList = Object.keys(headersData)
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#EEF4FF] via-white to-white -mt-20 pt-28 md:pt-36 pb-16 md:pb-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 via-white to-white -mt-20 pt-28 md:pt-36 pb-16 md:pb-24">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-gradient-to-r from-primary-light/50 via-secondary-blue/10 to-secondary-pink/10 blur-3xl pointer-events-none -z-10" />
       <Container>
         <div className="max-w-4xl mx-auto text-center space-y-6">

@@ -19,7 +19,7 @@ export default function SupportServices() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
               whileHover={{ y: -6 }}
-              className="bg-white rounded-2xl sm:rounded-[24px] p-8 sm:p-10 text-center flex flex-col items-center justify-between shadow-[0_12px_40px_rgba(0,0,0,0.06)] border border-gray-100 transition-shadow duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
+              className="bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-10 text-center flex flex-col items-center justify-between shadow-feature border border-gray-100 transition-shadow duration-300 hover:shadow-feature-hover"
             >
               <div className="flex flex-col items-center w-full">
                 <div className="h-28 sm:h-32 flex items-center justify-center mb-6">
@@ -32,18 +32,18 @@ export default function SupportServices() {
                   />
                 </div>
 
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#1F2326] mb-3">
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-dark mb-3">
                   {service.title}
                 </h3>
 
-                <p className="font-sans text-gray-500 text-sm sm:text-[15px] leading-relaxed mb-8 max-w-xs">
+                <p className="font-sans text-gray-500 text-sm sm:text-b3 leading-relaxed mb-8 max-w-xs">
                   {service.description}
                 </p>
               </div>
 
               <Link
                 href={service.actionUrl || '#'}
-                className="w-full max-w-[180px] py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-300 text-center bg-white text-[#1F2326] border border-gray-200/90 shadow-sm hover:bg-[#1663F9] hover:text-white hover:border-[#1663F9] hover:shadow-md hover:shadow-blue-500/25"
+                className="w-full max-w-xs py-3 rounded-lg font-sans font-semibold text-sm transition-all duration-300 text-center bg-white text-dark border border-gray-200/90 shadow-sm hover:bg-primary hover:text-white hover:border-primary hover:shadow-md hover:shadow-primary/25"
               >
                 {service.actionText}
               </Link>

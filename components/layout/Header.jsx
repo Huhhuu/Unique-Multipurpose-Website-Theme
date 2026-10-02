@@ -136,7 +136,7 @@ export default function Header({ theme }) {
           <div className="hidden lg:flex items-center">
             <Link
               href={cta.href}
-              className="inline-flex items-center justify-center h-11 px-7 rounded-full bg-primary text-white font-sans font-normal text-sub2 leading-[24px] tracking-normal hover:bg-primary-hover active:scale-[0.98] transition-all duration-200 shadow-none hover:shadow-md hover:shadow-primary/20"
+              className="inline-flex items-center justify-center h-11 px-7 rounded-full bg-primary text-white font-sans font-normal text-sub2 tracking-normal hover:bg-primary-hover active:scale-98 transition-all duration-200 shadow-none hover:shadow-md hover:shadow-primary/20"
             >
               {cta.text}
             </Link>
@@ -223,7 +223,7 @@ export default function Header({ theme }) {
               <Link
                 href={cta.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center h-11 px-6 rounded-full bg-primary text-white font-sans font-normal text-sub2 leading-[24px] tracking-normal hover:bg-primary-hover transition-colors"
+                className="w-full inline-flex items-center justify-center h-11 px-6 rounded-full bg-primary text-white font-sans font-normal text-sub2 tracking-normal hover:bg-primary-hover transition-colors"
               >
                 {cta.text}
               </Link>

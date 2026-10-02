@@ -1,7 +1,7 @@
 export default function AmbientBackdrop() {
   return (
     <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-      <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-[1440px] h-full pointer-events-none">
+      <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-canvas h-full pointer-events-none">
         <div
           className="absolute pointer-events-none"
           style={{
@@ -82,7 +82,7 @@ export default function AmbientBackdrop() {
         />
       </div>
 
-      <div className="block md:hidden absolute left-1/2 -translate-x-1/2 w-[375px] h-full pointer-events-none">
+      <div className="block md:hidden absolute left-1/2 -translate-x-1/2 w-canvas-mobile h-full pointer-events-none">
         <div
           className="absolute pointer-events-none"
           style={{

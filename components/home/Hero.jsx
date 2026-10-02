@@ -58,13 +58,13 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1
-            className="font-heading font-extrabold text-[34px] sm:text-[46px] md:text-[54px] lg:text-[60px] text-dark tracking-tight leading-[1.18]"
+            className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-h1 text-dark tracking-tight leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             Shop the Best{' '}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F961D8] to-[#1663F9]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary-pink to-primary">
               Styles
             </span>{' '}
             in <br className="hidden sm:inline" />
@@ -79,80 +79,80 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
         >
           <div className="flex items-center justify-center gap-2.5 sm:gap-4 md:gap-5 lg:gap-6">
-            <div className="hidden lg:block w-[170px] xl:w-[200px] flex-shrink-0">
-              <div className="relative aspect-square rounded-[24px] xl:rounded-[28px] overflow-hidden shadow-md shadow-black/5 hover:scale-[1.02] transition-transform duration-300">
+            <div className="hidden lg:block w-44 xl:w-52 flex-shrink-0">
+              <div className="relative aspect-square rounded-3xl overflow-hidden shadow-md shadow-black/5 hover:scale-102 transition-transform duration-300">
                 <Image
                   src="/images/ecommerce/hero/hero-1-beret.jpg"
                   alt="Fashion model wearing brown beret"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1280px) 170px, 200px"
+                  sizes="(max-width: 1280px) 176px, 208px"
                 />
               </div>
             </div>
 
-            <div className="w-[102px] sm:w-[145px] md:w-[165px] lg:w-[170px] xl:w-[200px] flex flex-col gap-2.5 sm:gap-4 md:gap-5 flex-shrink-0">
-              <div className="relative aspect-[4/3] rounded-[16px] sm:rounded-[22px] xl:rounded-[26px] overflow-hidden shadow-sm shadow-black/5 hover:scale-[1.02] transition-transform duration-300">
+            <div className="w-28 sm:w-36 md:w-40 lg:w-44 xl:w-52 flex flex-col gap-2.5 sm:gap-4 md:gap-5 flex-shrink-0">
+              <div className="relative aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm shadow-black/5 hover:scale-102 transition-transform duration-300">
                 <Image
                   src="/images/ecommerce/hero/hero-2-camera-man.jpg"
                   alt="Young man with sunglasses smiling on blue background"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 102px, 200px"
+                  sizes="(max-width: 768px) 112px, 208px"
                 />
               </div>
-              <div className="relative aspect-square rounded-[16px] sm:rounded-[22px] xl:rounded-[26px] overflow-hidden shadow-sm shadow-black/5 hover:scale-[1.02] transition-transform duration-300">
+              <div className="relative aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm shadow-black/5 hover:scale-102 transition-transform duration-300">
                 <Image
                   src="/images/ecommerce/hero/hero-3-red-coat.jpg"
                   alt="Woman in red coat holding camera on mint green background"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 102px, 200px"
+                  sizes="(max-width: 768px) 112px, 208px"
                 />
               </div>
             </div>
 
-            <div className="w-[136px] sm:w-[190px] md:w-[220px] lg:w-[240px] xl:w-[275px] flex-shrink-0">
-              <div className="relative aspect-[9/17] sm:aspect-[9/16] rounded-[22px] sm:rounded-[30px] xl:rounded-[36px] overflow-hidden shadow-xl shadow-yellow-500/10 hover:scale-[1.02] transition-transform duration-300">
+            <div className="w-36 sm:w-48 md:w-56 lg:w-60 xl:w-72 flex-shrink-0">
+              <div className="relative aspect-9/16 rounded-3xl xl:rounded-4xl overflow-hidden shadow-xl shadow-yellow-500/10 hover:scale-102 transition-transform duration-300">
                 <Image
                   src="/images/ecommerce/hero/hero-4-yellow-suit.jpg"
                   alt="Center fashion model sitting on yellow chair wearing yellow suit"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 136px, 275px"
+                  sizes="(max-width: 768px) 144px, 288px"
                 />
               </div>
             </div>
 
-            <div className="w-[102px] sm:w-[145px] md:w-[165px] lg:w-[170px] xl:w-[200px] flex flex-col gap-2.5 sm:gap-4 md:gap-5 flex-shrink-0">
-              <div className="relative aspect-square rounded-[16px] sm:rounded-[22px] xl:rounded-[26px] overflow-hidden shadow-sm shadow-black/5 hover:scale-[1.02] transition-transform duration-300">
+            <div className="w-28 sm:w-36 md:w-40 lg:w-44 xl:w-52 flex flex-col gap-2.5 sm:gap-4 md:gap-5 flex-shrink-0">
+              <div className="relative aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm shadow-black/5 hover:scale-102 transition-transform duration-300">
                 <Image
                   src="/images/ecommerce/hero/hero-5-flower-boy.jpg"
                   alt="Blond model with daisy flower on pink background"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 102px, 200px"
+                  sizes="(max-width: 768px) 112px, 208px"
                 />
               </div>
-              <div className="relative aspect-[4/3] rounded-[16px] sm:rounded-[22px] xl:rounded-[26px] overflow-hidden shadow-sm shadow-black/5 hover:scale-[1.02] transition-transform duration-300">
+              <div className="relative aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm shadow-black/5 hover:scale-102 transition-transform duration-300">
                 <Image
                   src="/images/ecommerce/hero/hero-6-beanie-man.jpg"
                   alt="Young man with beanie smiling on purple background"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 102px, 200px"
+                  sizes="(max-width: 768px) 112px, 208px"
                 />
               </div>
             </div>
 
-            <div className="hidden lg:block w-[170px] xl:w-[200px] flex-shrink-0">
-              <div className="relative aspect-square rounded-[24px] xl:rounded-[28px] overflow-hidden shadow-md shadow-black/5 hover:scale-[1.02] transition-transform duration-300">
+            <div className="hidden lg:block w-44 xl:w-52 flex-shrink-0">
+              <div className="relative aspect-square rounded-3xl overflow-hidden shadow-md shadow-black/5 hover:scale-102 transition-transform duration-300">
                 <Image
                   src="/images/ecommerce/hero/hero-7-sunglasses.jpg"
                   alt="Model in beige sweater on cyan background"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1280px) 170px, 200px"
+                  sizes="(max-width: 1280px) 176px, 208px"
                 />
               </div>
             </div>
