@@ -22,7 +22,7 @@ export default function Layout({
         {children}
       </main>
 
-      <Footer />
+      <Footer theme={theme} />
     </div>
   )
 }

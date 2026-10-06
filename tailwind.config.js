@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
+    "./data/**/*.{json,js}",
   ],
   theme: {
     extend: {
@@ -156,6 +157,11 @@ module.exports = {
       backgroundImage: {
         'gradient-testimonial': 'linear-gradient(90deg, #3F56EE 0%, #5094FA 100%)',
         'gradient-cta': 'linear-gradient(243.41deg, #9A40E4 7.82%, #5C70F4 74.31%)',
+        'gradient-hero-network': 'linear-gradient(90deg, #F961D8 0%, #1663F9 100%)',
+        'gradient-shelter': 'linear-gradient(180deg, rgba(213, 85, 199, 1) 0%, rgba(243, 150, 234, 1) 100%)',
+        'gradient-food': 'linear-gradient(180deg, rgba(244, 146, 53, 1) 0%, rgba(255, 180, 109, 1) 100%)',
+        'gradient-education': 'linear-gradient(180deg, rgba(107, 206, 253, 1) 0%, rgba(50, 169, 223, 1) 100%)',
+        'gradient-insurance': 'linear-gradient(180deg, rgba(255, 121, 153, 1) 0%, rgba(255, 189, 204, 1) 100%)',
       },
       aspectRatio: {
         '4/3': '4 / 3',

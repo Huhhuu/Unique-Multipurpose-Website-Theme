@@ -1,14 +1,136 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import Container from '@/components/common/Container'
 import Logo from '@/components/common/Logo'
 import ecommerceData from '@/data/ecommerce-theme.json'
+import charityData from '@/data/charity-theme.json'
 
-export default function Footer() {
-  const { footer } = ecommerceData
+export default function Footer({ theme }) {
+  const router = useRouter()
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
+
+  const resolvedThemeKey = (() => {
+    if (theme) return theme
+    if (router.query && router.query.theme) return router.query.theme
+    const pathSegment = router.pathname.replace(/^\//, '').split('/')[0]
+    if (pathSegment) return pathSegment
+    return 'ecommerce'
+  })()
+
+  // ----------------------------------------------------------------------
+  // CHARITY THEME FOOTER
+  // ----------------------------------------------------------------------
+  if (resolvedThemeKey === 'charity') {
+    const { footer } = charityData
+
+    return (
+      <footer className="bg-white text-dark pt-12 sm:pt-16 pb-12 sm:pb-16 border-t border-gray-100">
+        <Container>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 items-start">
+            {/* Column 1: Logo & Tagline */}
+            <div className="col-span-2 md:col-span-3 lg:col-span-1">
+              <Logo light={false} />
+              <p className="mt-4 font-sans text-sm text-gray-500 leading-relaxed max-w-xs">
+                {footer.description}
+              </p>
+            </div>
+
+            {/* Link Columns: Product, For Developers, Resources */}
+            {footer.columns.map((column) => (
+              <div key={column.title} className="col-span-1">
+                <h3 className="font-heading font-bold text-dark text-base mb-4 sm:mb-5 tracking-tight">
+                  {column.title}
+                </h3>
+                <ul className="space-y-3 font-sans text-sm text-gray-500">
+                  {column.links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="hover:text-primary transition-colors inline-block"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            {/* Social Icons for Desktop (Far Right Column) */}
+            <div className="hidden lg:flex items-center justify-end gap-3 pt-2">
+              {footer.socialLinks.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.name}
+                  className="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center hover:shadow-md hover:border-primary/40 hover:scale-105 transition-all"
+                >
+                  <Image
+                    src={item.icon}
+                    alt={item.name}
+                    width={18}
+                    height={18}
+                    className="w-4 h-4 object-contain"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Social Icons for Mobile & Tablet */}
+          <div className="lg:hidden flex items-center justify-center gap-3 mt-10">
+            {footer.socialLinks.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.name}
+                className="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center hover:shadow-md hover:scale-105 transition-all"
+              >
+                <Image
+                  src={item.icon}
+                  alt={item.name}
+                  width={18}
+                  height={18}
+                  className="w-4 h-4 object-contain"
+                />
+              </a>
+            ))}
+          </div>
+
+          {/* Bottom Bar: Copyright & Platform Links */}
+          <div className="mt-12 sm:mt-16 pt-8 border-t border-gray-100/80 flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
+            <p className="font-sans text-xs sm:text-sm text-gray-400 text-center sm:text-left">
+              {footer.copyright}
+            </p>
+
+            <div className="flex items-center justify-center gap-6 sm:gap-8 font-sans text-xs sm:text-sm text-gray-500">
+              {footer.bottomLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </footer>
+    )
+  }
+
+  // ----------------------------------------------------------------------
+  // E-COMMERCE THEME FOOTER (DEFAULT)
+  // ----------------------------------------------------------------------
+  const { footer } = ecommerceData
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -20,7 +142,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-white text-dark pt-12 sm:pt-16 pb-12 sm:pb-16">
+    <footer className="bg-white text-dark pt-12 sm:pt-16 pb-12 sm:pb-16 border-t border-gray-100">
       <Container>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
