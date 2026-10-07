@@ -16,7 +16,7 @@ export default function BlogCategories({
               : 'bg-gray-100 text-dark-muted hover:bg-gray-200'
           }`}
         >
-          Tất Cả Bài Viết
+          All Stories
         </button>
         {categories.map((cat) => (
           <button
@@ -38,7 +38,7 @@ export default function BlogCategories({
           type="text"
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Tìm kiếm bài viết..."
+          placeholder="Search articles..."
           className="w-full pl-10 pr-4 py-2.5 rounded-full border border-gray-200 text-xs text-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all bg-white"
         />
         <svg

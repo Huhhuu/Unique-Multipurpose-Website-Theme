@@ -35,18 +35,18 @@ export default function BlogIndexPage({ posts }) {
   return (
     <Layout
       theme="ecommerce"
-      title="Fashion Blog & Xu Hướng Phong Cách - MicPro Store"
-      description="Cập nhật những xu hướng thời trang mới nhất, mẹo phối đồ thực tế và cẩm nang phong cách sống từ các chuyên gia MicPro."
+      title="Fashion Blog & Style Trends | MicPro Store"
+      description="Discover the latest fashion trends, practical styling tips, and curated lifestyle guides from MicPro experts."
     >
       <div className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50/60 to-white">
         <Container>
           <SectionTitle
-            subtitle="Tin Tức & Xu Hướng"
+            subtitle="News & Trends"
             title="MicPro Fashion Blog & Lookbook"
-            description="Không gian chia sẻ kiến thức thời trang, cảm hứng phong cách đương đại và những bí quyết nâng tầm diện mạo mỗi ngày."
+            description="Exploring modern fashion perspectives, contemporary silhouettes, and everyday styling inspiration."
           />
 
-          {/* Featured Post (chỉ hiển thị khi không lọc tìm kiếm) */}
+          {/* Featured Post (only displayed when not filtering or searching) */}
           {selectedCategory === 'all' && searchQuery.trim() === '' && (
             <BlogFeatured post={featuredPost} />
           )}
@@ -71,10 +71,10 @@ export default function BlogIndexPage({ posts }) {
             <div className="text-center py-16 bg-gray-50 rounded-2xl border border-gray-100">
               <span className="text-4xl">🔍</span>
               <h3 className="font-heading font-bold text-h5 text-dark mt-4">
-                Không tìm thấy bài viết phù hợp
+                No matching stories found
               </h3>
               <p className="font-sans text-xs text-dark-muted mt-2">
-                Hãy thử tìm kiếm với từ khóa khác hoặc chuyển sang danh mục Tất cả.
+                Try searching with a different keyword or reset filters to view all articles.
               </p>
               <button
                 onClick={() => {
@@ -83,7 +83,7 @@ export default function BlogIndexPage({ posts }) {
                 }}
                 className="mt-6 px-5 py-2.5 rounded-full bg-primary text-white text-xs font-semibold hover:bg-primary-hover transition-colors"
               >
-                Xóa bộ lọc
+                Reset Filters
               </button>
             </div>
           )}

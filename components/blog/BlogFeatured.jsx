@@ -36,7 +36,7 @@ export default function BlogFeatured({ post }) {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-4">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Bài Viết Tiêu Điểm
+              Featured Story
             </div>
 
             <div className="flex items-center text-xs text-dark-muted font-sans gap-2 mb-3">
@@ -80,7 +80,7 @@ export default function BlogFeatured({ post }) {
               href={`/blog/${post.slug}`}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-dark text-white text-xs font-semibold hover:bg-primary transition-colors"
             >
-              Đọc Ngay
+              Read Story
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

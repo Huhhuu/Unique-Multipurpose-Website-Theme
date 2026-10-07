@@ -1,180 +1,180 @@
 [
   {
     "id": "post-1",
-    "slug": "xu-huong-thoi-trang-minimalism-2026",
-    "title": "Xu Hướng Thời Trang Minimalism 2026: Tối Giản Nhưng Đậm Chất Riêng",
-    "excerpt": "Khám phá cách phối đồ phong cách tối giản nhưng vẫn tạo điểm nhấn nổi bật với các bảng màu trung tính và chất liệu bền vững theo xu hướng mới nhất.",
-    "category": "Xu Hướng",
+    "slug": "minimalism-fashion-trends-2026",
+    "title": "Minimalism Fashion Trends 2026: The Power of Understated Elegance",
+    "excerpt": "Explore how modern minimalism redefines personal style with warm neutral palettes, clean tailoring, and sustainable premium fabrics.",
+    "category": "Trends",
     "categoryColor": "#1663F9",
     "author": {
       "name": "Mitchell Marsh",
       "role": "Creative Director",
       "avatar": "/images/ecommerce/testimonials/avatar-mitchell.png"
     },
-    "date": "07-10-2026",
-    "readTime": "5 phút đọc",
+    "date": "Oct 07, 2026",
+    "readTime": "5 min read",
     "image": "/images/ecommerce/hero/hero-4-yellow-suit.jpg",
-    "tags": ["Minimalism", "Trending", "Streetwear", "Bền vững"],
+    "tags": ["Minimalism", "Trending", "Streetwear", "Sustainable"],
     "content": [
       {
         "type": "paragraph",
-        "text": "Thời trang tối giản (Minimalism) trong năm 2026 không còn đơn thuần là việc khoác lên mình những bộ trang phục đơn sắc hay giản lược mọi chi tiết. Thay vào đó, xu hướng này tập trung vào sự tinh tế của đường kim mũi chỉ, cấu trúc phom dáng chuẩn mực và chất lượng vượt trội của từng thớ vải."
+        "text": "Minimalist fashion in 2026 is no longer just about monochrome basics or stark simplicity. Instead, the movement focuses on intentional craftsmanship, sculptural silhouettes, and the undeniable tactility of premium fabrics that stand the test of time."
       },
       {
         "type": "heading",
-        "text": "1. Sự trở lại của các gam màu đất và trung tính ấm áp"
+        "text": "1. The Rise of Warm Earth Tones and Neutral Palettes"
       },
       {
         "type": "paragraph",
-        "text": "Bên cạnh các tông màu cơ bản như đen, trắng và xám, bảng màu tối giản của năm 2026 ghi nhận sự lên ngôi của các gam màu kem, be cát, xanh rêu trầm và nâu đất. Những sắc thái này mang lại cảm giác dịu mắt, dễ dàng kết hợp chéo giữa các món đồ trong tủ quần áo mà không bao giờ lỗi mốt."
+        "text": "Beyond traditional black, white, and grey, this season welcomes desert sand, warm beige, deep olive, and rich terracotta. These grounded shades seamlessly transition between seasons and form the foundation of an effortlessly versatile wardrobe."
       },
       {
         "type": "quote",
-        "quote": "Sự tối giản đích thực không phải là cắt giảm cho đến khi không còn gì để bỏ, mà là giữ lại đúng những gì có giá trị và ý nghĩa nhất.",
-        "author": "Mitchell Marsh - Creative Director tại MicPro"
+        "quote": "True minimalism is not the absence of color or detail, but the presence of absolute purpose and quality.",
+        "author": "Mitchell Marsh - Creative Director at MicPro"
       },
       {
         "type": "heading",
-        "text": "2. Tối ưu tủ đồ Capsule Wardrobe với đồ may đo thông minh"
+        "text": "2. Curating a Functional Capsule Wardrobe"
       },
       {
         "type": "paragraph",
-        "text": "Một chiếc áo blazer may đo chuẩn form, hai chiếc áo thun cotton 100% thoáng khí và một chiếc quần tây ống suông đứng dáng có thể tạo ra hơn mười biến thể trang phục khác nhau. Điều này vừa giúp bạn tiết kiệm thời gian chọn đồ mỗi sáng, vừa hướng đến lối sống tiêu dùng có trách nhiệm với môi trường."
+        "text": "A perfectly tailored blazer, two high-grade organic cotton tees, and relaxed wide-leg trousers can create over a dozen unique outfit combinations. Investing in versatile essentials reduces morning decision fatigue while embracing sustainable living."
       },
       {
         "type": "heading",
-        "text": "3. Điểm nhấn thị giác qua phụ kiện tinh tế"
+        "text": "3. Elevating the Look with Subtle Accents"
       },
       {
         "type": "paragraph",
-        "text": "Khi trang phục tổng thể được giữ ở mức tinh giản, những món phụ kiện như một chiếc đồng hồ dây da cổ điển, kính mát gọng vuông hay một chiếc mũ beret sẽ trở thành tâm điểm thu hút mọi ánh nhìn mà không hề tạo cảm giác phô trương."
+        "text": "When your silhouette is clean and disciplined, understated accessories like a vintage leather watch, structured sunglasses, or a wool beret command attention without feeling overwhelming."
       }
     ]
   },
   {
     "id": "post-2",
-    "slug": "bi-quyet-phoi-do-layer-cho-nam-gioi",
-    "title": "Bí Quyết Phối Đồ Layer Đỉnh Cao Cho Nam Giới Hiện Đại",
-    "excerpt": "Nghệ thuật xếp lớp trang phục từ áo thun, sweater đến áo khoác dạ giúp bạn luôn lịch lãm, ấm áp và tự tin trong mọi hoàn cảnh thời tiết.",
-    "category": "Mẹo Phối Đồ",
+    "slug": "mastering-the-art-of-layering",
+    "title": "Mastering the Art of Layering: A Gentleman's Style Guide",
+    "excerpt": "Learn how to combine tees, knitwear, and structured outerwear for an effortlessly sharp look in any transitional weather.",
+    "category": "Styling Tips",
     "categoryColor": "#F961D8",
     "author": {
       "name": "Sarah Jenkins",
       "role": "Lead Fashion Stylist",
       "avatar": "/images/ecommerce/hero/hero-7-sunglasses.jpg"
     },
-    "date": "05-10-2026",
-    "readTime": "7 phút đọc",
+    "date": "Oct 05, 2026",
+    "readTime": "7 min read",
     "image": "/images/ecommerce/hero/hero-3-red-coat.jpg",
-    "tags": ["Layering", "Men Fashion", "Lookbook", "Thu Đông"],
+    "tags": ["Layering", "Men Fashion", "Lookbook", "Autumn"],
     "content": [
       {
         "type": "paragraph",
-        "text": "Phối đồ xếp lớp (Layering) là một trong những kỹ năng thời trang kinh điển giúp phái mạnh thể hiện gu thẩm mỹ tinh tế. Khi thời tiết giao mùa, việc kết hợp linh hoạt các lớp áo không chỉ giữ ấm hiệu quả mà còn tạo nên chiều sâu thị giác phong phú."
+        "text": "Layering is one of the most expressive styling techniques in modern menswear. When seasons transition, strategically stacking complementary garments delivers both functional warmth and rich visual depth."
       },
       {
         "type": "heading",
-        "text": "Quy tắc phối đồ từ mỏng đến dày"
+        "text": "The Golden Rule: Thin to Thick"
       },
       {
         "type": "paragraph",
-        "text": "Nguyên tắc cốt lõi của kỹ thuật layer là lớp áo trong cùng luôn mỏng và ôm nhẹ cơ thể nhất (như áo thun trơn hoặc sơ mi mỏng), tiếp theo là lớp giữ nhiệt trung gian (áo len dệt kim, cardigan hoặc sweater nỉ), và lớp ngoài cùng là áo khoác có chất liệu cứng cáp (trench coat, áo khoác dạ hoặc denim jacket)."
+        "text": "Always build your outfit from the lightest inner layer to the heaviest outer shell. Begin with a breathable crewneck t-shirt or crisp shirt, add an insulating middle layer like a fine merino sweater or knit cardigan, and finish with a structured overcoat or trench jacket."
       },
       {
         "type": "quote",
-        "quote": "Bí quyết của một set đồ layer thành công là bạn có thể cởi bỏ từng lớp áo ra mà các phần còn lại trông vẫn hoàn hảo và chỉn chu.",
+        "quote": "A successful layered outfit is one where you can remove any single layer and the remaining look still appears complete and intentional.",
         "author": "Sarah Jenkins - Lead Fashion Stylist"
       },
       {
         "type": "heading",
-        "text": "Hài hòa về màu sắc và hoa văn"
+        "text": "Harmonizing Colors and Textures"
       },
       {
         "type": "paragraph",
-        "text": "Hãy giới hạn tối đa 3 màu sắc trên một tổng thể trang phục. Nếu một lớp áo đã có hoa văn hoặc màu sắc rực rỡ, các lớp áo còn lại nên là gam màu trơn trung tính để tránh gây rối mắt cho người đối diện."
+        "text": "Limit your palette to three harmonious tones. Pair smooth cotton with ribbed wool and textured denim to create contrast without relying on loud patterns."
       }
     ]
   },
   {
     "id": "post-3",
-    "slug": "huong-dan-bao-quan-do-cotton-va-polyester",
-    "title": "Cẩm Nang Bảo Quản Trang Phục Cotton & Polyester Luôn Bền Đẹp",
-    "excerpt": "Những lưu ý cốt lõi khi giặt ủi và bảo quản form dáng giúp quần áo luôn giữ được độ co giãn, thoáng khí và màu sắc tươi sáng như ngày đầu.",
-    "category": "Chăm Sóc Vải",
+    "slug": "essential-fabric-care-guide",
+    "title": "Essential Fabric Care: Keeping Cotton and Polyester Looking New",
+    "excerpt": "Expert laundry and storage tips to maintain fabric elasticity, color vibrancy, and tailored structure for years to come.",
+    "category": "Fabric Care",
     "categoryColor": "#3DB0E5",
     "author": {
       "name": "Alex Ferguson",
       "role": "Fabric Specialist",
       "avatar": "/images/ecommerce/hero/hero-6-beanie-man.jpg"
     },
-    "date": "02-10-2026",
-    "readTime": "4 phút đọc",
+    "date": "Oct 02, 2026",
+    "readTime": "4 min read",
     "image": "/images/ecommerce/similar/model-man-sunglasses.jpg",
-    "tags": ["Fabric Care", "Cotton", "Polyester", "Bền màu"],
+    "tags": ["Fabric Care", "Cotton", "Polyester", "Longevity"],
     "content": [
       {
         "type": "paragraph",
-        "text": "Hầu hết các sản phẩm thời trang cao cấp tại MicPro đều sử dụng sự kết hợp tối ưu giữa sợi bông tự nhiên Cotton và sợi tổng hợp Polyester để mang lại độ thoáng mát, êm ái cùng khả năng chống nhăn vượt trội. Tuy nhiên, để duy trì tuổi thọ trang phục lâu dài, cách chăm sóc đóng vai trò quyết định."
+        "text": "Most premium apparel at MicPro blends natural long-staple cotton with engineered polyester to deliver softness, breathability, and wrinkle resistance. Proper garment maintenance ensures your favorite pieces retain their original form and vivid hue."
       },
       {
         "type": "heading",
-        "text": "Nhiệt độ nước giặt tiêu chuẩn"
+        "text": "Optimum Water Temperature"
       },
       {
         "type": "paragraph",
-        "text": "Luôn ưu tiên giặt bằng nước mát hoặc nước ấm dưới 30 độ C. Nước quá nóng sẽ làm sợi cotton bị co rút sợi vải và làm phai màu nhuộm tự nhiên, trong khi sợi polyester có thể bị biến dạng nhiệt."
+        "text": "Always wash in cold or lukewarm water below 30°C. Hot water breaks down cotton fibers, causing shrinkage and fading, while excessive heat can warp synthetic filaments."
       },
       {
         "type": "quote",
-        "quote": "Chăm sóc quần áo đúng cách không chỉ tiết kiệm chi phí mua sắm mà còn là hành động thiết thực bảo vệ môi trường sống.",
+        "quote": "Caring for your clothes properly is the simplest and most impactful step toward sustainable fashion consumption.",
         "author": "Alex Ferguson - Fabric Specialist"
       },
       {
         "type": "heading",
-        "text": "Cách phơi và ủi chuẩn xưởng may"
+        "text": "Drying and Pressing Techniques"
       },
       {
         "type": "paragraph",
-        "text": "Phơi trang phục ở nơi thoáng gió, tránh ánh nắng mặt trời gắt chiếu trực tiếp. Đối với áo sweater len và áo thun nặng sợi, nên phơi nằm ngang trên giàn phơi thay vì móc treo thẳng đứng để tránh tình trạng chảy xệ cổ và giãn vai áo."
+        "text": "Air-dry garments away from direct scorching sunlight. For heavy sweaters and knitwear, dry flat on a drying rack rather than hanging to prevent shoulder stretching and collar distortion."
       }
     ]
   },
   {
     "id": "post-4",
-    "slug": "5-mon-phu-kien-nang-tam-phong-cach-streetwear",
-    "title": "5 Món Phụ Kiện Nâng Tầm Phong Cách Streetwear Cho Giới Trẻ",
-    "excerpt": "Điểm xuyết những món phụ kiện nhỏ nhưng mang lại sức hút ấn tượng cho tổng thể set đồ dạo phố của bạn từ mũ beret đến kính mát thời trang.",
-    "category": "Phụ Kiện",
+    "slug": "5-streetwear-accessories-to-elevate-your-look",
+    "title": "5 Streetwear Accessories That Instantly Elevate Your Everyday Look",
+    "excerpt": "From statement eyewear to structured headwear, discover how small accent pieces transform simple everyday outfits.",
+    "category": "Accessories",
     "categoryColor": "#F5953A",
     "author": {
       "name": "Mitchell Marsh",
       "role": "Creative Director",
       "avatar": "/images/ecommerce/testimonials/avatar-mitchell.png"
     },
-    "date": "28-09-2026",
-    "readTime": "6 phút đọc",
+    "date": "Sep 28, 2026",
+    "readTime": "6 min read",
     "image": "/images/ecommerce/hero/hero-1-beret.jpg",
-    "tags": ["Streetwear", "Accessories", "Kính Mát", "Mũ Beret"],
+    "tags": ["Streetwear", "Accessories", "Eyewear", "Headwear"],
     "content": [
       {
         "type": "paragraph",
-        "text": "Một bộ trang phục dù đắt tiền đến đâu vẫn có thể thiếu đi nét cá tính riêng nếu không có sự đồng hành của những món phụ kiện phù hợp. Trong phong cách dạo phố Streetwear, phụ kiện chính là tuyên ngôn thể hiện bản sắc của người mặc."
+        "text": "Even the finest curated outfit can feel incomplete without the right accents. In modern streetwear, accessories serve as a signature statement of personal confidence and aesthetic awareness."
       },
       {
         "type": "heading",
-        "text": "Mũ beret và beanie - Nét lãng tử thời thượng"
+        "text": "Berets and Beanies: Effortless European Flair"
       },
       {
         "type": "paragraph",
-        "text": "Mũ beret cổ điển kết hợp cùng áo khoác dạ dáng dài hay mũ len beanie đi cùng hoodie phom rộng lập tức biến hóa bạn thành một tín đồ thời trang mang phong cách châu Âu hiện đại."
+        "text": "A structured wool beret paired with a tailored overcoat, or a ribbed beanie topping an oversized hoodie, instantly injects high-fashion energy into a casual street silhouette."
       },
       {
         "type": "heading",
-        "text": "Kính mát mắt vuông góc cạnh"
+        "text": "Angular Geometric Sunglasses"
       },
       {
         "type": "paragraph",
-        "text": "Kính mát không chỉ có công dụng bảo vệ mắt khỏi tia UV mà còn là vũ khí sắc bén giúp định hình đường nét khuôn mặt, tạo vẻ ngoài cuốn hút và bí ẩn trong từng khung hình chụp lookbook."
+        "text": "Beyond vital UV defense, dark geometric frames accentuate facial structure and deliver an enigmatic, runway-ready look for everyday urban outings."
       }
     ]
   }

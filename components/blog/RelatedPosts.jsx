@@ -9,9 +9,9 @@ export default function RelatedPosts({ posts }) {
     <section className="py-14 sm:py-20 bg-gray-50/70 border-t border-gray-100">
       <Container>
         <SectionTitle
-          subtitle="Khám phá thêm"
-          title="Bài viết liên quan bạn có thể thích"
-          description="Cập nhật thêm những kiến thức thời trang, mẹo phối đồ và xu hướng phong cách sống mới nhất."
+          subtitle="Explore More"
+          title="Related Stories You Might Enjoy"
+          description="Stay updated with the latest fashion perspectives, styling tips, and contemporary lifestyle inspiration."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

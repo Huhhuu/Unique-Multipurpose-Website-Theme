@@ -11,7 +11,7 @@ export default function BlogDetail({ post }) {
       <Container>
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-xs text-dark-muted font-sans mb-8">
-          <Link href="/" className="hover:text-primary transition-colors">Trang Chủ</Link>
+          <Link href="/" className="hover:text-primary transition-colors">Home</Link>
           <span>/</span>
           <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
           <span>/</span>
@@ -114,7 +114,7 @@ export default function BlogDetail({ post }) {
           {/* Tags */}
           {post.tags && post.tags.length > 0 && (
             <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap items-center gap-2">
-              <span className="font-heading text-xs font-bold text-dark mr-2">Từ khóa:</span>
+              <span className="font-heading text-xs font-bold text-dark mr-2">Tags:</span>
               {post.tags.map((tag) => (
                 <span
                   key={tag}
@@ -138,9 +138,9 @@ export default function BlogDetail({ post }) {
             </div>
             <div className="text-center sm:text-left flex-grow">
               <p className="font-heading font-bold text-h5 text-dark">{post.author.name}</p>
-              <p className="font-sans text-xs text-primary font-medium mb-2">{post.author.role} tại MicPro</p>
+              <p className="font-sans text-xs text-primary font-medium mb-2">{post.author.role} at MicPro</p>
               <p className="font-sans text-xs text-dark-muted leading-relaxed">
-                Chuyên gia định hình phong cách và cố vấn xu hướng thời trang hiện đại với hơn 8 năm kinh nghiệm trong ngành thời trang và bán lẻ cao cấp.
+                Senior fashion consultant and trend strategist with over 8 years of experience in luxury retail and contemporary streetwear.
               </p>
             </div>
           </div>
@@ -154,7 +154,7 @@ export default function BlogDetail({ post }) {
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              Quay lại danh sách Blog
+              Back to All Stories
             </Link>
           </div>
         </div>

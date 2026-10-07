@@ -71,7 +71,7 @@ export default function BlogCard({ post }) {
           <Link
             href={`/blog/${post.slug}`}
             className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 text-dark group-hover:bg-primary group-hover:text-white transition-colors"
-            aria-label="Đọc bài viết"
+            aria-label="Read article"
           >
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
