@@ -5,6 +5,7 @@ import SectionTitle from '@/components/common/SectionTitle'
 import BlogFeatured from '@/components/blog/BlogFeatured'
 import BlogCategories from '@/components/blog/BlogCategories'
 import BlogCard from '@/components/blog/BlogCard'
+import BlogBackdrop from '@/components/blog/BlogBackdrop'
 import blogData from '@/data/blog-data.json'
 
 export default function BlogIndexPage({ posts }) {
@@ -38,20 +39,19 @@ export default function BlogIndexPage({ posts }) {
       title="Fashion Blog & Style Trends | MicPro Store"
       description="Discover the latest fashion trends, practical styling tips, and curated lifestyle guides from MicPro experts."
     >
-      <div className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50/60 to-white">
-        <Container>
+      <div className="relative overflow-hidden bg-white -mt-20 pt-28 md:pt-36 lg:pt-40 pb-16 md:pb-24">
+        <BlogBackdrop />
+        <Container className="relative z-10">
           <SectionTitle
             subtitle="News & Trends"
             title="MicPro Fashion Blog & Lookbook"
             description="Exploring modern fashion perspectives, contemporary silhouettes, and everyday styling inspiration."
           />
 
-          {/* Featured Post (only displayed when not filtering or searching) */}
           {selectedCategory === 'all' && searchQuery.trim() === '' && (
             <BlogFeatured post={featuredPost} />
           )}
 
-          {/* Categories & Search */}
           <BlogCategories
             categories={categories}
             selectedCategory={selectedCategory}
@@ -60,7 +60,6 @@ export default function BlogIndexPage({ posts }) {
             onSearchChange={setSearchQuery}
           />
 
-          {/* Blog Grid */}
           {filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (

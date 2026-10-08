@@ -284,7 +284,7 @@
         "links": [
           { "label": "help Center", "href": "#" },
           { "label": "Podcast", "href": "#" },
-          { "label": "Blog", "href": "#" },
+          { "label": "Blog", "href": "/blog" },
           { "label": "Guides", "href": "#" },
           { "label": "Glossary", "href": "#" },
           { "label": "Product Sell", "href": "#" }

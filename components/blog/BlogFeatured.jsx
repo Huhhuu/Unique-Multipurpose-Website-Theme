@@ -10,7 +10,7 @@ export default function BlogFeatured({ post }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-gray-100 shadow-sm hover:shadow-md transition-shadow mb-12 sm:mb-16"
+      className="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 lg:p-10 border border-gray-100/80 shadow-md shadow-primary/5 hover:shadow-xl transition-all duration-300 mb-12 sm:mb-16"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         <div className="lg:col-span-7 relative h-72 sm:h-96 w-full rounded-2xl overflow-hidden bg-gray-50">

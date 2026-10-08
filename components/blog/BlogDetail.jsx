@@ -2,14 +2,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Container from '@/components/common/Container'
+import BlogBackdrop from './BlogBackdrop'
 
 export default function BlogDetail({ post }) {
   if (!post) return null
 
   return (
-    <article className="py-10 md:py-16">
-      <Container>
-        {/* Breadcrumb */}
+    <article className="relative overflow-hidden bg-white -mt-20 pt-28 md:pt-36 pb-16 md:pb-24">
+      <BlogBackdrop />
+      <Container className="relative z-10">
         <nav className="flex items-center gap-2 text-xs text-dark-muted font-sans mb-8">
           <Link href="/" className="hover:text-primary transition-colors">Home</Link>
           <span>/</span>
@@ -18,7 +19,6 @@ export default function BlogDetail({ post }) {
           <span className="text-dark font-medium line-clamp-1 max-w-[280px] sm:max-w-md">{post.title}</span>
         </nav>
 
-        {/* Article Header */}
         <header className="max-w-4xl mx-auto text-center mb-10 md:mb-14">
           <div className="inline-block mb-4">
             <span
@@ -55,7 +55,6 @@ export default function BlogDetail({ post }) {
           </div>
         </header>
 
-        {/* Featured Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -72,7 +71,6 @@ export default function BlogDetail({ post }) {
           />
         </motion.div>
 
-        {/* Article Body */}
         <div className="max-w-3xl mx-auto">
           <div className="space-y-6 font-sans text-dark/85 text-b1 leading-relaxed">
             {post.content && post.content.map((block, idx) => {
@@ -111,7 +109,6 @@ export default function BlogDetail({ post }) {
             })}
           </div>
 
-          {/* Tags */}
           {post.tags && post.tags.length > 0 && (
             <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap items-center gap-2">
               <span className="font-heading text-xs font-bold text-dark mr-2">Tags:</span>
@@ -126,7 +123,6 @@ export default function BlogDetail({ post }) {
             </div>
           )}
 
-          {/* Author Card */}
           <div className="mt-10 p-6 sm:p-8 rounded-3xl bg-gray-50 border border-gray-100 flex flex-col sm:flex-row items-center sm:items-start gap-5">
             <div className="relative w-16 h-16 rounded-full overflow-hidden bg-white shadow-sm flex-shrink-0">
               <Image
@@ -145,7 +141,6 @@ export default function BlogDetail({ post }) {
             </div>
           </div>
 
-          {/* Back button */}
           <div className="mt-10 text-center">
             <Link
               href="/blog"

@@ -9,7 +9,7 @@ export default function BlogCard({ post }) {
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.25, ease: 'easeOut' }}
-      className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+      className="group bg-white/90 backdrop-blur-md rounded-2xl overflow-hidden border border-gray-100/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full"
     >
       <Link href={`/blog/${post.slug}`} className="block relative h-52 sm:h-60 overflow-hidden bg-gray-50">
         <Image
