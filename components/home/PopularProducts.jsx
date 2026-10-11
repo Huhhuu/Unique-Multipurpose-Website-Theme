@@ -24,23 +24,29 @@ export default function PopularProducts() {
     }, 1600)
   }
 
+  const scrollRafRef = useRef(null)
+
   const handleScroll = (e) => {
     const container = e.currentTarget
     if (!container || !container.children.length) return
-    const containerCenter = container.scrollLeft + container.offsetWidth / 2
-    let closestIndex = 0
-    let minDistance = Infinity
 
-    Array.from(container.children).forEach((child, index) => {
-      const childCenter = child.offsetLeft + child.offsetWidth / 2
-      const distance = Math.abs(containerCenter - childCenter)
-      if (distance < minDistance) {
-        minDistance = distance
-        closestIndex = index
-      }
+    if (scrollRafRef.current) cancelAnimationFrame(scrollRafRef.current)
+    scrollRafRef.current = requestAnimationFrame(() => {
+      const containerCenter = container.scrollLeft + container.offsetWidth / 2
+      let closestIndex = 0
+      let minDistance = Infinity
+
+      Array.from(container.children).forEach((child, index) => {
+        const childCenter = child.offsetLeft + child.offsetWidth / 2
+        const distance = Math.abs(containerCenter - childCenter)
+        if (distance < minDistance) {
+          minDistance = distance
+          closestIndex = index
+        }
+      })
+
+      setActiveSlide(closestIndex)
     })
-
-    setActiveSlide(closestIndex)
   }
 
   const scrollToSlide = (index) => {

@@ -1,20 +1,28 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 export default function ProductCard({
   product,
   onQuickView,
-  isFavorite,
+  isFavorite = false,
   onToggleFavorite,
   onAddToCart,
 }) {
   const [added, setAdded] = useState(false)
+  const timerRef = useRef(null)
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current)
+    }
+  }, [])
 
   const handleAdd = (e) => {
     e.stopPropagation()
-    onAddToCart(product)
+    onAddToCart?.(product)
     setAdded(true)
-    setTimeout(() => setAdded(false), 2000)
+    if (timerRef.current) clearTimeout(timerRef.current)
+    timerRef.current = setTimeout(() => setAdded(false), 2000)
   }
 
   return (
@@ -23,7 +31,7 @@ export default function ProductCard({
         <div
           className="relative w-full aspect-square rounded-2xl overflow-hidden flex items-center justify-center p-6 cursor-pointer"
           style={{ backgroundColor: product.bgBoxColor || '#F3F4F6' }}
-          onClick={() => onQuickView(product)}
+          onClick={() => onQuickView?.(product)}
         >
           <div className="relative w-full h-full">
             <Image
@@ -57,7 +65,7 @@ export default function ProductCard({
             type="button"
             onClick={(e) => {
               e.stopPropagation()
-              onToggleFavorite(product.id)
+              onToggleFavorite?.(product.id)
             }}
             className={`absolute top-3 right-3 w-9 h-9 rounded-full bg-white/95 backdrop-blur-sm shadow-md flex items-center justify-center transition-transform active:scale-90 hover:scale-110 z-10 ${
               isFavorite ? 'text-danger' : 'text-gray-400 hover:text-danger'
@@ -84,7 +92,7 @@ export default function ProductCard({
               type="button"
               onClick={(e) => {
                 e.stopPropagation()
-                onQuickView(product)
+                onQuickView?.(product)
               }}
               className="w-full py-2.5 rounded-xl bg-white/95 backdrop-blur-md text-dark font-sans font-semibold text-xs shadow-lg hover:bg-dark hover:text-white transition-colors"
             >
@@ -106,7 +114,7 @@ export default function ProductCard({
           </div>
 
           <h3
-            onClick={() => onQuickView(product)}
+            onClick={() => onQuickView?.(product)}
             className="font-heading font-bold text-base text-dark hover:text-primary transition-colors cursor-pointer line-clamp-1"
           >
             {product.name}

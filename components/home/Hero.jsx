@@ -118,6 +118,7 @@ export default function Hero() {
                   src="/images/ecommerce/hero/hero-4-yellow-suit.jpg"
                   alt="Center fashion model sitting on yellow chair wearing yellow suit"
                   fill
+                  priority
                   className="object-cover"
                   sizes="(max-width: 768px) 144px, 288px"
                 />

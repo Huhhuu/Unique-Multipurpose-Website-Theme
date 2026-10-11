@@ -17,22 +17,16 @@ export default function Header({ theme }) {
       setIsScrolled(window.scrollY > 20)
     }
     handleScroll()
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const resolvedThemeKey = (() => {
-    if (theme && headersData[theme]) return theme
-    if (router.query && router.query.theme && headersData[router.query.theme]) {
-      return router.query.theme
-    }
-    const pathSegment = router.pathname.replace(/^\//, '').split('/')[0]
-    if (pathSegment && headersData[pathSegment]) {
-      return pathSegment
-    }
-    return 'ecommerce'
-  })()
+  useEffect(() => {
+    setMobileMenuOpen(false)
+    setActiveDropdown(null)
+  }, [router.asPath])
 
+  const resolvedThemeKey = (theme && headersData[theme]) ? theme : 'ecommerce'
   const currentHeader = headersData[resolvedThemeKey] || headersData.ecommerce
   const navItems = currentHeader.navItems || []
   const cta = currentHeader.cta || { text: 'Shop Now', href: '/shop' }

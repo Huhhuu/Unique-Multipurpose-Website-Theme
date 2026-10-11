@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -7,21 +7,50 @@ export default function ProductQuickView({ product, isOpen, onClose, onAddToCart
   const [selectedColor, setSelectedColor] = useState(product?.colors ? product.colors[0] : null)
   const [quantity, setQuantity] = useState(1)
   const [added, setAdded] = useState(false)
+  const timerRef = useRef(null)
+
+  useEffect(() => {
+    if (product) {
+      setSelectedSize(product.sizes?.[0] || null)
+      setSelectedColor(product.colors?.[0] || null)
+      setQuantity(1)
+      setAdded(false)
+    }
+  }, [product])
+
+  useEffect(() => {
+    if (!isOpen) return
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose?.()
+    }
+
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = originalOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+      if (timerRef.current) clearTimeout(timerRef.current)
+    }
+  }, [isOpen, onClose])
 
   if (!isOpen || !product) return null
 
   const handleAdd = () => {
-    onAddToCart({
+    onAddToCart?.({
       ...product,
       selectedSize,
       selectedColor,
       quantity,
     })
     setAdded(true)
-    setTimeout(() => {
+    if (timerRef.current) clearTimeout(timerRef.current)
+    timerRef.current = setTimeout(() => {
       setAdded(false)
-      onClose()
-    }, 1500)
+      onClose?.()
+    }, 1200)
   }
 
   return (

@@ -18,22 +18,27 @@ export default function Layout({
   useEffect(() => {
     if (!footerReveal) return
 
+    let rafId = null
+
     const updateDimensions = () => {
-      if (footerRef.current && contentRef.current) {
-        const fHeight = footerRef.current.offsetHeight
-        const cHeight = contentRef.current.offsetHeight
-        const wHeight = window.innerHeight
-        const wWidth = window.innerWidth
+      if (rafId) cancelAnimationFrame(rafId)
+      rafId = requestAnimationFrame(() => {
+        if (footerRef.current && contentRef.current) {
+          const fHeight = footerRef.current.offsetHeight
+          const cHeight = contentRef.current.offsetHeight
+          const wHeight = window.innerHeight
+          const wWidth = window.innerWidth
 
-        setFooterHeight(fHeight)
+          setFooterHeight(fHeight)
 
-        const canReveal =
-          wWidth >= 768 &&
-          wHeight > fHeight * 0.8 &&
-          cHeight > wHeight
+          const canReveal =
+            wWidth >= 768 &&
+            wHeight > fHeight * 0.8 &&
+            cHeight > wHeight
 
-        setIsRevealActive(canReveal)
-      }
+          setIsRevealActive(canReveal)
+        }
+      })
     }
 
     updateDimensions()
@@ -45,13 +50,14 @@ export default function Layout({
     if (footerRef.current) observer.observe(footerRef.current)
     if (contentRef.current) observer.observe(contentRef.current)
 
-    window.addEventListener('resize', updateDimensions)
+    window.addEventListener('resize', updateDimensions, { passive: true })
 
     return () => {
+      if (rafId) cancelAnimationFrame(rafId)
       observer.disconnect()
       window.removeEventListener('resize', updateDimensions)
     }
-  }, [footerReveal, theme, children])
+  }, [footerReveal, theme])
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
