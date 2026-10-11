@@ -29,7 +29,7 @@ export default function Header({ theme }) {
   const resolvedThemeKey = (theme && headersData[theme]) ? theme : 'ecommerce'
   const currentHeader = headersData[resolvedThemeKey] || headersData.ecommerce
   const navItems = currentHeader.navItems || []
-  const cta = currentHeader.cta || { text: 'Shop Now', href: '/products' }
+  const cta = currentHeader.cta || { text: 'Shop Now', href: '/#popular-products' }
 
   const toggleMobileMenu = () => setMobileMenuOpen(prev => !prev)
 

@@ -60,7 +60,7 @@ export default function PopularProducts() {
   }
 
   return (
-    <section className="relative bg-transparent pt-0 pb-20 sm:pb-28 overflow-visible">
+    <section id="popular-products" className="relative bg-transparent pt-0 pb-20 sm:pb-28 overflow-visible scroll-mt-24">
       <Container className="overflow-visible">
         <div className="bg-white rounded-3xl lg:rounded-4xl shadow-card-soft border border-gray-100/80 p-5 sm:p-8 md:p-10 lg:p-12 xl:p-14 overflow-visible">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 sm:mb-8 md:mb-10 lg:mb-12">

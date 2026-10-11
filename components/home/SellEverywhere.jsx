@@ -7,7 +7,7 @@ export default function SellEverywhere() {
   const { sellEverywhere } = themeData
 
   return (
-    <section className="relative py-14 sm:py-20 md:py-24 z-10">
+    <section id="sell-everywhere" className="relative py-14 sm:py-20 md:py-24 z-10 scroll-mt-24">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <div className="order-2 lg:order-1 lg:col-span-6 flex justify-center">
