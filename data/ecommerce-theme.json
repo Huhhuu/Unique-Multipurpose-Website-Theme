@@ -3,7 +3,7 @@
     "title": "Popular Products",
     "highlightWord": "Products",
     "actionText": "See all Products",
-    "actionUrl": "/shop",
+    "actionUrl": "/products",
     "products": [
       {
         "id": "prod-1",
@@ -244,7 +244,7 @@
   "cta": {
     "title": "Your Own Online Store is Just a Few Clicks Away",
     "actionText": "Get Started for free",
-    "actionUrl": "/shop",
+    "actionUrl": "/products",
     "note": "No credit card required — pay when you're ready."
   },
   "footer": {

@@ -5,7 +5,7 @@
     "brand": "MicPro",
     "cta": {
       "text": "Shop Now",
-      "href": "/shop"
+      "href": "/products"
     },
     "navItems": [
       {
@@ -14,21 +14,21 @@
       },
       {
         "name": "Product",
-        "href": "#",
+        "href": "/products",
         "hasDropdown": true,
         "submenu": [
-          { "name": "Men Fashion", "href": "#" },
-          { "name": "Women Fashion", "href": "#" },
-          { "name": "Accessories", "href": "#" }
+          { "name": "Men Fashion", "href": "/products#men" },
+          { "name": "Women Fashion", "href": "/products#women" },
+          { "name": "Accessories", "href": "/products#accessories" }
         ]
       },
       {
         "name": "New Arrival",
-        "href": "#",
+        "href": "/new-arrivals",
         "hasDropdown": true,
         "submenu": [
-          { "name": "Summer Collection", "href": "#" },
-          { "name": "Trending Styles", "href": "#" }
+          { "name": "Summer Collection", "href": "/new-arrivals" },
+          { "name": "Trending Styles", "href": "/new-arrivals" }
         ]
       },
       {
@@ -36,16 +36,12 @@
         "href": "/blog"
       },
       {
-        "name": "Shop",
-        "href": "/shop"
-      },
-      {
         "name": "Brand",
-        "href": "#",
+        "href": "/brands",
         "hasDropdown": true,
         "submenu": [
-          { "name": "Besnik Studio", "href": "#" },
-          { "name": "Official Stores", "href": "#" }
+          { "name": "Besnik Studio", "href": "/brands" },
+          { "name": "Official Stores", "href": "/brands" }
         ]
       }
     ]
