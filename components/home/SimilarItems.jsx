@@ -47,35 +47,33 @@ export default function SimilarItems() {
             />
           </div>
 
-          <div className="lg:col-span-6 flex justify-center items-center">
+          <div className="lg:col-span-6 flex justify-center lg:justify-end">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative w-similar-shield sm:w-similar-shield-lg aspect-52/63"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-full max-w-md sm:max-w-product-card aspect-shield filter drop-shadow-shield"
             >
-              <div
-                className="absolute inset-0 bg-yellow-400"
-                style={{
-                  clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-                }}
-              />
-              <div
-                className="absolute inset-1.5 overflow-hidden"
-                style={{
-                  clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-                }}
+              <svg
+                viewBox="0 0 460 530"
+                className="w-full h-full"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <div
-                  className="w-full h-full bg-cover bg-center transition-transform duration-700 hover:scale-105"
-                  style={{
-                    backgroundImage: `url(${similarItems.modelImage})`,
-                  }}
-                  role="img"
-                  aria-label="Model with stylish sunglasses and white hat"
+                <defs>
+                  <clipPath id="hexagon-shield-clip">
+                    <path d="M 202.27 15.97 Q 230.00 0.00 257.73 15.97 L 432.27 116.53 Q 460.00 132.50 460.00 164.50 L 460.00 365.50 Q 460.00 397.50 432.27 413.47 L 257.73 514.03 Q 230.00 530.00 202.27 514.03 L 27.73 413.47 Q 0.00 397.50 0.00 365.50 L 0.00 164.50 Q 0.00 132.50 27.73 116.53 Z" />
+                  </clipPath>
+                </defs>
+                <image
+                  href={similarItems.image}
+                  width="100%"
+                  height="100%"
+                  preserveAspectRatio="xMidYMid slice"
+                  clipPath="url(#hexagon-shield-clip)"
                 />
-              </div>
+              </svg>
             </motion.div>
           </div>
         </div>
