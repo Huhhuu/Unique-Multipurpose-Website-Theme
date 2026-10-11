@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Badge from '@/components/atoms/Badge'
 
 export default function BlogCard({ post }) {
   if (!post) return null
@@ -20,12 +21,12 @@ export default function BlogCard({ post }) {
           className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute top-4 left-4 z-10">
-          <span
-            className="px-3.5 py-1 text-xs font-semibold rounded-full text-white shadow-sm backdrop-blur-md"
+          <Badge
+            className="text-white shadow-sm backdrop-blur-md px-3.5 py-1"
             style={{ backgroundColor: post.categoryColor || '#1663F9' }}
           >
             {post.category}
-          </span>
+          </Badge>
         </div>
       </Link>
 

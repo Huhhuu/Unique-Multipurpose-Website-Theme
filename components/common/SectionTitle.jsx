@@ -1,3 +1,5 @@
+import Badge from '@/components/atoms/Badge'
+
 export default function SectionTitle({
   subtitle,
   title,
@@ -8,9 +10,9 @@ export default function SectionTitle({
   return (
     <div className={`mb-12 ${centered ? 'text-center max-w-2xl mx-auto' : 'max-w-xl'} ${className}`}>
       {subtitle && (
-        <span className="font-sans text-sub3 font-semibold uppercase tracking-wider text-primary bg-primary-light px-3.5 py-1.5 rounded-full inline-block">
+        <Badge variant="primary" className="uppercase tracking-wider font-sans text-sub3 px-3.5 py-1.5 mb-2">
           {subtitle}
-        </span>
+        </Badge>
       )}
       {title && (
         <h2 className="mt-3 font-heading text-h4 sm:text-h3 lg:text-h2 font-bold text-dark tracking-tight">
