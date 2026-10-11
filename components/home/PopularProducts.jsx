@@ -7,9 +7,7 @@ import ecommerceData from '@/data/ecommerce-theme.json'
 
 export default function PopularProducts() {
   const { popularProducts } = ecommerceData
-  const [favorites, setFavorites] = useState(() =>
-    popularProducts.products.reduce((acc, p) => ({ ...acc, [p.id]: p.isFavorite }), {})
-  )
+  const [favorites, setFavorites] = useState({})
   const [addedItems, setAddedItems] = useState({})
   const [activeSlide, setActiveSlide] = useState(0)
   const [hoveredIdx, setHoveredIdx] = useState(null)
@@ -78,20 +76,20 @@ export default function PopularProducts() {
 
           <div
             ref={carouselRef}
-            className="flex overflow-x-auto snap-x snap-mandatory gap-4 sm:gap-6 pb-6 md:pb-0 no-scrollbar -mr-5 sm:-mr-8 md:mr-0 pr-6 sm:pr-8 md:pr-0 md:grid md:grid-cols-4 md:gap-6 md:overflow-visible"
+            className="flex overflow-x-auto snap-x snap-mandatory gap-4 sm:gap-6 pb-6 lg:pb-0 no-scrollbar -mr-5 sm:-mr-8 lg:mr-0 pr-6 sm:pr-8 lg:pr-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:overflow-visible"
             onScroll={handleScroll}
           >
             {popularProducts.products.map((product, idx) => {
-              const isFav = favorites[product.id]
+              const isFav = Boolean(favorites[product.id])
               const isAdded = addedItems[product.id]
-              const isHighlighted = hoveredIdx !== null ? hoveredIdx === idx : activeSlide === idx
+              const isHighlighted = hoveredIdx === idx
 
               return (
                 <motion.div
                   key={product.id}
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
-                  className={`w-64 sm:w-72 md:w-auto flex-shrink-0 md:flex-shrink snap-center md:snap-align-none flex flex-col p-2.5 sm:p-3 rounded-2xl border transition-all duration-300 ${
+                  className={`w-64 sm:w-auto flex-shrink-0 sm:flex-shrink snap-center sm:snap-align-none flex flex-col p-2.5 sm:p-3 rounded-2xl border transition-all duration-300 min-w-0 ${
                     isHighlighted
                       ? 'bg-white shadow-card-hover border-gray-100/90 -mb-6 md:-mb-10 relative z-20'
                       : 'bg-transparent border-transparent mb-0 relative z-10'
@@ -140,23 +138,19 @@ export default function PopularProducts() {
                     </div>
                   </div>
 
-                  <div className="mt-3.5 sm:mt-4 px-1.5 pb-1 flex items-center justify-between">
-                    <div>
-                      <h3
-                        className={`font-heading text-b2 sm:text-sub1 tracking-tight transition-colors ${
-                          isHighlighted ? 'font-semibold text-dark' : 'font-medium text-gray-500'
-                        }`}
-                      >
+                  <div className="mt-3.5 sm:mt-4 px-1 pb-1 flex items-center justify-between gap-2 min-w-0">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-heading text-b2 sm:text-sub1 font-semibold text-dark tracking-tight leading-snug truncate">
                         {product.name}
                       </h3>
-                      <div className="flex items-baseline mt-1">
-                        <span className="font-heading font-extrabold text-lg sm:text-h5 text-dark leading-none">
+                      <div className="flex items-baseline mt-1 gap-1.5 flex-wrap">
+                        <span className="font-heading font-extrabold text-base sm:text-lg lg:text-h5 text-dark leading-none whitespace-nowrap">
                           {product.price}
                           <span className="text-xs sm:text-sm font-bold text-primary ml-0.5">
                             {product.currency}
                           </span>
                         </span>
-                        <span className="text-xs text-gray-400 line-through ml-2 font-medium">
+                        <span className="text-xs text-gray-400 line-through font-medium whitespace-nowrap">
                           {product.originalPrice}
                           {product.currency}
                         </span>
@@ -166,7 +160,7 @@ export default function PopularProducts() {
                     <button
                       type="button"
                       onClick={() => handleBuy(product.id)}
-                      className={`font-heading font-bold text-xs uppercase tracking-wider px-4 sm:px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm active:scale-95 ${
+                      className={`shrink-0 font-heading font-bold text-xs uppercase tracking-wider px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-200 shadow-sm active:scale-95 ${
                         isAdded
                           ? 'bg-emerald-500 text-white'
                           : 'bg-primary hover:bg-blue-700 text-white hover:shadow-md'

@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#4f46e5"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="20">U</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <g transform="translate(0, 5.5)">
+    <path d="M23.9999 12V0H35.9999V24.1818H23.9999V12Z" fill="#1663F9" />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M11.8182 0L0 12V24.1818H11.8183V12L24 9.58229e-05V0H11.8182Z"
+      fill="#F961D8"
+    />
+  </g>
 </svg>

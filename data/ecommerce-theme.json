@@ -14,7 +14,7 @@
         "currency": "$",
         "image": "/images/ecommerce/popular_products/product-black-sweater.png",
         "bgBoxColor": "#E8E9EB",
-        "isFavorite": true,
+        "isFavorite": false,
         "rating": 4.9
       },
       {

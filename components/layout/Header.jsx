@@ -62,7 +62,11 @@ export default function Header({ theme }) {
 
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => {
-              const isActive = router.pathname === item.href
+              const isActive =
+                item.href === '/'
+                  ? router.pathname === '/'
+                  : item.href !== '#' &&
+                    (router.pathname === item.href || router.pathname.startsWith(item.href + '/'))
 
               if (item.hasDropdown) {
                 return (
@@ -96,11 +100,14 @@ export default function Header({ theme }) {
                     {activeDropdown === item.name && (
                       <div className="absolute top-full left-0 w-64 py-2 bg-white rounded-2xl shadow-xl border border-gray-100 animate-in fade-in slide-in-from-top-1 duration-150 z-50">
                         {item.submenu.map((sub) => {
-                          const isSubActive = router.pathname === sub.href
+                          const isSubActive =
+                            sub.href !== '#' &&
+                            (router.asPath === sub.href || router.pathname === sub.href)
                           return (
                             <Link
                               key={sub.name}
                               href={sub.href}
+                              onClick={sub.href === '#' ? (e) => e.preventDefault() : undefined}
                               className={`block px-4 py-2.5 text-b3 transition-colors ${
                                 isSubActive
                                   ? 'text-primary font-semibold bg-primary-light'
@@ -121,6 +128,7 @@ export default function Header({ theme }) {
                 <Link
                   key={item.name}
                   href={item.href}
+                  onClick={item.href === '#' ? (e) => e.preventDefault() : undefined}
                   className={`font-sans text-sub2 font-medium transition-colors duration-150 ${
                     isActive
                       ? 'text-primary font-semibold'
@@ -163,7 +171,11 @@ export default function Header({ theme }) {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 px-4 bg-white/98 backdrop-blur-xl rounded-2xl shadow-xl border border-gray-100 my-2 space-y-1">
             {navItems.map((item) => {
-              const isActive = router.pathname === item.href
+              const isActive =
+                item.href === '/'
+                  ? router.pathname === '/'
+                  : item.href !== '#' &&
+                    (router.pathname === item.href || router.pathname.startsWith(item.href + '/'))
 
               if (item.hasDropdown) {
                 const isExpanded = !!mobileExpanded[item.name]
@@ -172,7 +184,11 @@ export default function Header({ theme }) {
                     <button
                       type="button"
                       onClick={() => toggleMobileSubmenu(item.name)}
-                      className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-b2 font-medium text-dark hover:bg-light transition-colors"
+                      className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-b2 font-medium transition-colors ${
+                        isActive
+                          ? 'text-primary font-semibold bg-primary-light/40'
+                          : 'text-dark hover:bg-light'
+                      }`}
                     >
                       <span>{item.name}</span>
                       <svg
@@ -187,16 +203,28 @@ export default function Header({ theme }) {
 
                     {isExpanded && (
                       <div className="pl-4 pr-2 py-1 space-y-1">
-                        {item.submenu.map((sub) => (
-                          <Link
-                            key={sub.name}
-                            href={sub.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="block px-3 py-2 rounded-lg text-b3 text-dark/70 hover:text-primary hover:bg-primary-light transition-colors"
-                          >
-                            {sub.name}
-                          </Link>
-                        ))}
+                        {item.submenu.map((sub) => {
+                          const isSubActive =
+                            sub.href !== '#' &&
+                            (router.asPath === sub.href || router.pathname === sub.href)
+                          return (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              onClick={(e) => {
+                                if (sub.href === '#') e.preventDefault()
+                                setMobileMenuOpen(false)
+                              }}
+                              className={`block px-3 py-2 rounded-lg text-b3 transition-colors ${
+                                isSubActive
+                                  ? 'bg-primary-light text-primary font-semibold'
+                                  : 'text-dark/70 hover:text-primary hover:bg-primary-light/50'
+                              }`}
+                            >
+                              {sub.name}
+                            </Link>
+                          )
+                        })}
                       </div>
                     )}
                   </div>
@@ -207,7 +235,10 @@ export default function Header({ theme }) {
                 <Link
                   key={item.name}
                   href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    if (item.href === '#') e.preventDefault()
+                    setMobileMenuOpen(false)
+                  }}
                   className={`block px-3 py-2 rounded-lg text-b2 font-medium transition-colors ${
                     isActive
                       ? 'bg-primary-light text-primary font-semibold'
